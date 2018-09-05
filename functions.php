@@ -41,7 +41,8 @@ if ( ! function_exists( 'ips_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'highlight-links-img-sm', 425, 305, true );
+		add_image_size( 'home-hero', 2000, 9999, false );
+		add_image_size( 'home-main-content-img', 1800, 9999, false );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -185,6 +186,11 @@ add_filter( 'tiny_mce_before_init', 'ips_mce_before_init_insert_formats' );
 function ips_mce_before_init_insert_formats( $init_array ) {
 	$style_formats = array(
 		array(
+		'title' => 'Button', // Title to show in dropdown
+		'inline' => 'a', // Element to add class to
+		'classes' => 'btn' // CSS class to add
+		),
+		array(
 			'title' => 'Double Column List', // Title to show in dropdown
 			'selector' => 'ul', // Element to add class to
 			'classes' => 'dbl-list' // CSS class to add
@@ -242,4 +248,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Homepage Flexible Content.
  */
 require get_template_directory() . '/inc/homepage-flexible-content.php';
+
+/**
+ * Homepage Hero.
+ */
+require get_template_directory() . '/inc/homepage-hero.php';
 

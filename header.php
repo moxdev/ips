@@ -62,4 +62,6 @@
 
 	</header><!-- #masthead -->
 
+	<?php if(is_frontpage): echo ips_home_hero(); endif ?>
+
 	<div id="content" class="site-content">

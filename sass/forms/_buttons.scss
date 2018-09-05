@@ -20,3 +20,25 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.btn {
+	display: inline-block;
+	// font-family: "Orbitron-Bold",sans-serif;
+	letter-spacing: 1px;
+	min-width: 175px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: tranparent;
+	color: $color__brand-1;
+	margin-top: 1em;
+	border: 1px solid $color__brand-2;
+	border-radius: 0;
+	font-size: 14.4px;
+	font-size: .9rem;
+	line-height: 1;
+	padding: 1rem 1rem .7rem;
+	-webkit-appearance: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}

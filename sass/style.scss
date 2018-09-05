@@ -41,6 +41,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Pages
+	## Home Page
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
@@ -109,3 +111,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages/pages";

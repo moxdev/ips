@@ -10,3 +10,7 @@
 ## Comments
 --------------------------------------------------------------*/
 @import "primary/comments";
+
+.wrapper {
+  @include padding-left-right;
+}
