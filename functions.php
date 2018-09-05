@@ -41,6 +41,7 @@ if ( ! function_exists( 'ips_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'highlight-links-img-sm', 425, 305, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -117,7 +118,7 @@ add_action( 'widgets_init', 'ips_widgets_init' );
 function ips_scripts() {
 	wp_enqueue_style( 'ips-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'ips-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'ips-navigation', get_template_directory_uri() . '/js/min/navigation.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ips-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -197,6 +198,17 @@ function ips_mce_before_init_insert_formats( $init_array ) {
 add_action( 'admin_init', 'ips_add_editor_styles' );
 function ips_add_editor_styles() {
 	add_editor_style( 'editor-custom-styles.css' );
+}
+
+/**
+ * Add arrow icons into registered "main-menu"
+ */
+add_filter( 'walker_nav_menu_start_el', 'ips_add_arrow', 10, 4);
+function ips_add_arrow( $item_output, $item, $depth, $args ){
+	if( 'main-menu' == $args->theme_location && $depth == 0 && in_array('menu-item-has-children', $item->classes ) ) {
+			$item_output .='<button class="arrow"><span class="screen-reader-text">Toggle Menu</span></button>';
+	}
+	return $item_output;
 }
 
 /**

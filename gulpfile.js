@@ -1,5 +1,5 @@
 // Set up some variables for your build
-const projectURL = 'Your local domain here'; // URL of your local domain
+const projectURL = 'http://ips.test/'; // URL of your local domain
 
 const gulp = require('gulp'),
   sass = require('gulp-sass'),
