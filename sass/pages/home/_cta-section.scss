@@ -1,0 +1,43 @@
+.home {
+  .call-to-action {
+
+    .inner-wrapper {
+      position: relative;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      img {
+        object-fit: cover;
+        font-family: "object-fit: cover";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index:-1;
+        display: block;
+      }
+
+      .title-container {
+        @include padding-left-right;
+        padding-top: 10em;
+        padding-bottom: 10em;
+      }
+
+      span {
+        display: inline-block;
+      }
+
+      .title {
+        border-top: 2px solid $color__brand-2;
+        font-size: 2em;
+        width: auto;
+        margin: auto
+      }
+
+
+    }
+
+  }
+}
