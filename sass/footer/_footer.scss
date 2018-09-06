@@ -1,0 +1,32 @@
+#colophon {
+  background-color: $color__brand-1;
+  color: #fff;
+
+  .site-info {
+    @include padding-left-right;
+    @include section-padding(1);
+  }
+
+  .branding {
+    svg {
+      width: 100px;
+      height: 50px;
+    }
+  }
+
+  #menu-footer-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      &:before {
+        content: '\002D';
+        margin-right: 1em;
+      }
+    }
+  }
+}

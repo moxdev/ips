@@ -256,3 +256,8 @@ require get_template_directory() . '/inc/homepage-flexible-content.php';
  */
 require get_template_directory() . '/inc/homepage-hero.php';
 
+/**
+ * Social Media Menu.
+ */
+require get_template_directory() . '/inc/social-media-menu.php';
+

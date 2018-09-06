@@ -259,46 +259,46 @@
 }
 
 /* Footer Menu */
-#footer-navigation {
-	margin-top: 1rem;
+// #footer-navigation {
+// 	margin-top: 1rem;
 
-	@include respond-to(small) {
-		margin-top: 2rem;
-	}
+// 	@include respond-to(small) {
+// 		margin-top: 2rem;
+// 	}
 
-	ul {
-		margin: 1rem 0;
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
+// 	ul {
+// 		margin: 1rem 0;
+// 		list-style: none;
+// 		display: flex;
+// 		flex-wrap: wrap;
 
-		@include respond-to(small) {
-			margin: 0;
-		}
-	}
+// 		@include respond-to(small) {
+// 			margin: 0;
+// 		}
+// 	}
 
-	li {
-		flex: 0 0 50%;
+// 	li {
+// 		flex: 0 0 50%;
 
-		@include respond-to(small) {
-			flex: 0 1 auto;
-			margin-right: 1.5rem;
-		}
-	}
+// 		@include respond-to(small) {
+// 			flex: 0 1 auto;
+// 			margin-right: 1.5rem;
+// 		}
+// 	}
 
-	a {
-		font-size: 0.875em;
-		letter-spacing: 0.0625em;
-		// font-family: $font__alt-heavy;
-		color: #000;
-		text-decoration: none;
-		text-transform: uppercase;
+// 	a {
+// 		font-size: 0.875em;
+// 		letter-spacing: 0.0625em;
+// 		// font-family: $font__alt-heavy;
+// 		color: #000;
+// 		text-decoration: none;
+// 		text-transform: uppercase;
 
-		&:hover {
-			color: $color__link;
-		}
-	}
-}
+// 		&:hover {
+// 			color: $color__link;
+// 		}
+// 	}
+// }
 
 /* Social Media */
 .social-media {
