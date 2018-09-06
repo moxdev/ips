@@ -44,6 +44,7 @@ if ( ! function_exists( 'ips_setup' ) ) :
 		add_image_size( 'home-hero', 2000, 9999, false );
 		add_image_size( 'home-main-content-img', 1800, 9999, false );
 		add_image_size( 'home-cta-img', 450, 350, true );
+		add_image_size( 'home-cert-img', 175, 9999, false );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
