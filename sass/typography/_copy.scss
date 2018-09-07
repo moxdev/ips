@@ -8,6 +8,20 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0 1.5em;
+	position: relative;
+
+	&:before {
+		content: "\0022";
+		position: absolute;
+		font-size: 3em;
+		top: 22px;
+		left: -20px;
+		line-height: 0;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
 }
 
 address {

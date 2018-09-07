@@ -208,6 +208,11 @@ function ips_mce_before_init_insert_formats( $init_array ) {
 			'selector' => 'ul', // Element to add class to
 			'classes' => 'dbl-list' // CSS class to add
 		),
+		array(
+			'title' => 'Testimonial Name Tag', // Title to show in dropdown
+			'selector' => 'p', // Element to add class to
+			'classes' => 'testimonial-name-tag' // CSS class to add
+		),
 	);
 	$init_array['style_formats'] = json_encode( $style_formats );
 	return $init_array;
