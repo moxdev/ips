@@ -19,21 +19,19 @@
         display: block;
       }
 
-      .title-container {
-        @include padding-left-right;
-        padding-top: 10em;
-        padding-bottom: 10em;
-      }
-
-      span {
-        display: inline-block;
-      }
-
       .title {
-        border-top: 2px solid $color__brand-2;
+        display: inline-block;
         font-size: 2em;
-        width: auto;
-        margin: auto
+        @include padding-left-right;
+        padding-top: 5em;
+        padding-bottom: 5em;
+
+        &:before {
+          content: '';
+          position: absolute;
+          border-top: 2px solid $color__brand-2;
+          width: 40%;
+        }
       }
     }
 
@@ -41,35 +39,30 @@
       background-color: $color__brand-1;
       color: #fff;
 
-      .title {
-        border: none;
-        margin-top: 2px;
+      .estimate-title {
+        position: absolute;
+        font-size: 3em;
+        background-color: $color__brand-2;
+        @include padding-left-right;
+        top: 1.5em;
+        left: 1.875rem;
+        width: 65%;
+        text-transform: uppercase;
+      }
 
-        &:before {
-          content: 'free';
-          text-transform: uppercase;
-          position: absolute;
-          top: 20px;
-          left: 1.875rem;
-          font-size: 2.5em;
-          background-color: $color__brand-2;
-          padding: 0 1em 0 10px;
-          text-align: left;
-        }
+      .subtitle {
+        display: inline-block;
+        font-size: 2em;
+        @include padding-left-right;
+        padding-top: 5em;
+        padding-bottom: 5em;
+      }
 
-        &:after {
-          content: 'free';
-          text-transform: uppercase;
-          position: absolute;
-          top: 20px;
-          left: 1.875rem;
-          font-size: 2.5em;
-          background-color: $color__brand-2;
-          padding: 0 1em 0 10px;
-          text-align: left;
-        }
+      .btn {
+        position: absolute;
+        bottom: 100px;
+        left: 1.875rem;
       }
     }
-
   }
 }

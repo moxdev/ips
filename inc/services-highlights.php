@@ -27,11 +27,7 @@
 
           <?php if( $link_text ) : ?>
 
-            <div class='title-container'>
-
-              <span class='title'><?php echo esc_html( $link_text ); ?></span>
-
-            </div>
+            <span class='title'><?php echo esc_html( $link_text ); ?></span>
 
           <?php endif; ?>
 
@@ -48,11 +44,10 @@
 
         <div class='inner-wrapper estimate-callout'>
 
-          <div class='title-container'>
+          <span class="estimate-title"><?php echo esc_html( $title ); ?></span>
+          <span class='subtitle'><?php echo esc_html( $subtitle ); ?></span>
+          <a class="btn" href='<?php echo esc_url( $button_page_link ); ?>'><?php echo $button_text; ?></a>
 
-            <span class='title'><?php echo esc_html( $subtitle ); ?></span>
-
-          </div>
         </div>
 
       <?php endif; ?>

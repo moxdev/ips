@@ -1,0 +1,54 @@
+.acf-flex-content-area.photo-gallery {
+  ul {
+    list-style: none;
+    // margin: 0 -( map-get($outer_spacing, 'small' ) * 0.5) + rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    li {
+      @include test(red);
+      flex: 0 1 50%;
+
+      @include respond-to(x-small) {
+        flex: 0 1 33.333%;
+      }
+
+      @include respond-to(medium) {
+        flex: 0 1 25%;
+      }
+    }
+
+    a, img {
+      display: block;
+    }
+
+    a {
+      padding: 0.75rem;
+      transition: opacity 0.25s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .item {
+      opacity: 0;
+      transform: scale(0.9) translateY(50px);
+      transition: opacity 0.25s, transform 0.25s;
+
+      &.visible {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
