@@ -45,6 +45,7 @@ if ( ! function_exists( 'ips_setup' ) ) :
 		add_image_size( 'home-main-content-img', 1800, 9999, false );
 		add_image_size( 'home-cta-img', 450, 350, true );
 		add_image_size( 'home-cert-img', 175, 9999, false );
+		add_image_size( 'services-highlight-img', 450, 350, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -161,9 +162,9 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 	acf_add_options_sub_page(array(
-		'menu_title'	=> 'Footer Copyright',
-		'menu_slug' 	=> 'footer-copyright',
-		'post_id' 	  => 'footer-copyright',
+		'menu_title'	=> 'Certifications',
+		'menu_slug' 	=> 'certifications',
+		'post_id' 	  => 'certifications',
 		'parent_slug'	=> 'global-information',
 	));
 
@@ -173,6 +174,14 @@ if( function_exists('acf_add_options_page') ) {
 		'post_id' 	  => 'estimate-callout',
 		'parent_slug'	=> 'global-information',
 	));
+
+	acf_add_options_sub_page(array(
+		'menu_title'	=> 'Footer Copyright',
+		'menu_slug' 	=> 'footer-copyright',
+		'post_id' 	  => 'footer-copyright',
+		'parent_slug'	=> 'global-information',
+	));
+
 }
 
 /**
@@ -260,4 +269,14 @@ require get_template_directory() . '/inc/homepage-hero.php';
  * Social Media Menu.
  */
 require get_template_directory() . '/inc/social-media-menu.php';
+
+/**
+ * Global Certification section.
+ */
+require get_template_directory() . '/inc/certification-section.php';
+
+/**
+ * Services Highlights section.
+ */
+require get_template_directory() . '/inc/services-highlights.php';
 

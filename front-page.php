@@ -30,6 +30,7 @@ get_header();
 		</main><!-- #main -->
 
 		<?php ips_flexible_content(); ?>
+		<?php ips_certifications_section(); ?>
 
 	</div><!-- #primary -->
 

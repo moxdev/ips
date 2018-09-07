@@ -33,6 +33,7 @@ get_header();
 		?>
 
 		</main><!-- #main -->
+		<?php ips_certifications_section(); ?>
 	</div><!-- #primary -->
 
 <?php
