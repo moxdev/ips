@@ -1,3 +1,27 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-weight: normal;
+}
+
+h1 {
+	font-family: $font__bold;
+	color: #000;
+	font-size: 1.765em;
+	line-height: 1.2;
+
+	@include respond-to(large) {
+		font-size: 3.529em;
+	}
+
+}
+
+h2 {
+	font-family: $font__bold;
+	color: $color__brand-1;
+}
+
+h3 {
+	font-family: $font__bold;
+	color: #000;
+
 }

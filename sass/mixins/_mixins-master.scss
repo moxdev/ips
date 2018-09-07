@@ -1,6 +1,6 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) * 1px;
+	font-size: ($sizeValue * 17) * 1px;
 	font-size: $sizeValue * 1rem;
 }
 
@@ -91,6 +91,24 @@
 
   @include respond-to(large) {
     padding-left: $padding-xlg + rem;
+    padding-right: $padding-xlg + rem;
+  }
+}
+
+@mixin section-padding($padding) {
+  padding-top: $padding + rem;
+  padding-bottom: $padding + rem;
+}
+
+// Outside padding
+@mixin padding-right($padding-sm: map-get($outer_spacing, small), $padding-lg: map-get($outer_spacing, medium), $padding-xlg: map-get($outer_spacing, xlarge)) {
+	padding-right: $padding-sm + rem;
+
+	@include respond-to(small) {
+		padding-right: $padding-lg + rem;
+  }
+
+  @include respond-to(large) {
     padding-right: $padding-xlg + rem;
   }
 }

@@ -23,19 +23,18 @@ input[type="submit"] {
 
 .btn {
 	display: inline-block;
-	// font-family: "Orbitron-Bold",sans-serif;
+	font-family: $font__black_italic;
+	color: $color__brand-1;
+	border: 2px solid $color__brand-2;
+	background: tranparent;
 	letter-spacing: 1px;
 	min-width: 175px;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
-	background: tranparent;
-	color: $color__brand-1;
 	margin-top: 1em;
-	border: 1px solid $color__brand-2;
 	border-radius: 0;
 	font-size: 14.4px;
-	font-size: .9rem;
+	font-size: 1.176em;
 	line-height: 1;
 	padding: 1rem 1rem .7rem;
 	-webkit-appearance: none;

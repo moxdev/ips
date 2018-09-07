@@ -1,3 +1,15 @@
+html {
+	@include font-size(0.875);
+
+	@include respond-to(small) {
+		@include font-size(0.9375);
+	}
+
+	@include respond-to(x-large) {
+		@include font-size(1.125);
+	}
+}
+
 body,
 button,
 input,

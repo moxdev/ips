@@ -1,12 +1,16 @@
 #masthead {
-  position: relative;
-  z-index: 5;
-  @include padding-left-right;
-  padding-top: 0.75rem;
-  padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  @include padding-left-right;
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, .5);
 
   @include respond-to('large') {
     // align-items: flex-end;
