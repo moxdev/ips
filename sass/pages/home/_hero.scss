@@ -6,10 +6,6 @@
   overflow: hidden;
   margin-bottom: 3em;
 
-  >* {
-    @include test(red);
-  }
-
   @include respond-to(small) {
     display: flex;
     justify-content: space-between;
@@ -44,10 +40,6 @@
     position: relative;
     z-index: 50;
     padding-top: 7em;
-
-    >* {
-      @include test(red);
-    }
 
     @include respond-to(small) {
       flex: 1;
@@ -103,10 +95,6 @@
     @include padding-left;
     padding-right: 0;
     margin-right: 0;
-
-    >* {
-      @include test(red);
-    }
 
     @include respond-to(small) {
       flex: 1;
