@@ -13,4 +13,6 @@
 
 .wrapper {
   @include padding-left-right;
+  @include section-padding(2);
+  @include max-width(750px);
 }

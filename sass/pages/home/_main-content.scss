@@ -34,7 +34,28 @@
         z-index: 300;
         color: #fff;
         @include section-padding(2);
+        text-align: center;
+
+        h1 {
+          color: #fff;
+          @include font-smooth;
+
+          @include respond-to(small) {
+            font-size: 1.765em;;
+          }
+
+          @include respond-to(large) {
+            font-size: 1.765em;;
+          }
+        }
+
+        .btn {
+          color: #fff;
+          @include font-smooth;
+        }
       }
+
+
     }
 
   }
