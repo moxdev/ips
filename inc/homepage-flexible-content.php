@@ -26,7 +26,7 @@ endif;
 
     if( have_rows('call_to_actions') ): ?>
 
-    <section class="call-to-action">
+    <section id="call-to-action">
       <ul>
         <?php while( have_rows('call_to_actions') ): the_row();
           $title = get_sub_field('title');
@@ -63,9 +63,9 @@ endif;
 
     <section id='company-values'>
       <ul class='values-list'>
-        <li><?php echo esc_html( $value_1 ); ?></li>
-        <li><?php echo esc_html( $value_2 ); ?></li>
-        <li><?php echo esc_html( $value_3 ); ?></li>
+        <li><span><?php echo esc_html( $value_1 ); ?></span></li>
+        <li><span><?php echo esc_html( $value_2 ); ?></span></li>
+        <li><span><?php echo esc_html( $value_3 ); ?></span></li>
       </ul>
     </section>
 

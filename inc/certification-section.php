@@ -8,39 +8,45 @@
  if (! function_exists( 'ips_certifications_section' ) ) :
   function ips_certifications_section() {
 
+    if( have_rows('certifications', 'certifications') ):
+
     $cert_section_title = get_field('certification_section_title', 'certifications');
     $cert_page_link = get_field('certification_page_link_url', 'certifications'); ?>
 
-    <section class='certifications'>
+      <section id='certifications'>
+        <div class='wrapper'>
 
-      <?php if($cert_section_title): ?>
+          <?php if($cert_section_title): ?>
 
-      <h2><?php echo esc_html( $cert_section_title ); ?></h2>
+            <h2><?php echo esc_html( $cert_section_title ); ?></h2>
 
-      <?php endif; ?>
+          <?php endif; ?>
 
-      <?php if( have_rows('certifications', 'certifications') ): ?>
+            <ul class="certifications">
 
-      <div class="certifications">
+              <?php while( have_rows('certifications', 'certifications') ): the_row();
+                $cert_img = get_sub_field('certification_image', 'certifications'); ?>
 
-        <?php while( have_rows('certifications', 'certifications') ): the_row();
-          $cert_img = get_sub_field('certification_image', 'certifications'); ?>
+                  <li>
+                    <a href='<?php echo esc_url( $cert_page_link ); ?>'>
 
-        <div class="inner-wrapper">
-          <a href='<?php echo esc_url( $cert_page_link ); ?>'>
+                      <?php if( $cert_img ) : ?>
 
-            <?php if( $cert_img ) : ?>
-              <img src="<?php echo esc_url( $cert_img['sizes']['home-cert-img'] ); ?>" alt="<?php echo esc_attr( $cert_img['alt'] ); ?>" description="<?php echo esc_attr( $cert_img['description'] ); ?>">
+                        <img src="<?php echo esc_url( $cert_img['sizes']['home-cert-img'] ); ?>" alt="<?php echo esc_attr( $cert_img['alt'] ); ?>" description="<?php echo esc_attr( $cert_img['description'] ); ?>">
 
-            <?php endif; ?>
+                      <?php endif; ?>
 
-          </a>
+                    </a>
+                  </li>
+
+              <?php endwhile; ?>
+
+            </ul>
         </div>
-        <?php endwhile; ?>
-      </div>
-
-    </section>
+      </section>
 
     <?php endif;
+
   }
+
 endif;

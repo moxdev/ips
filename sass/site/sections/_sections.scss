@@ -1,0 +1,36 @@
+section#certifications {
+  text-align: center;
+
+  h2 {
+    color: #000;
+  }
+
+  ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    align-items: center;
+    // text-align: center;
+
+    li {
+      margin: 1rem;
+      @include respond-to(x-small) {
+        // flex: 0 0
+
+      }
+
+      img {
+        width: 70px;
+
+        @include respond-to(small) {
+          width: 120px;
+
+        }
+      }
+
+    }
+  }
+}
