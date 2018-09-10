@@ -61,7 +61,7 @@ endif;
     $value_2 = get_sub_field( 'values2' );
     $value_3 = get_sub_field( 'values3' ); ?>
 
-    <section class='company-values'>
+    <section id='company-values'>
       <ul class='values-list'>
         <li><?php echo esc_html( $value_1 ); ?></li>
         <li><?php echo esc_html( $value_2 ); ?></li>
