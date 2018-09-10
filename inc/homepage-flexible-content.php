@@ -27,33 +27,26 @@ endif;
     if( have_rows('call_to_actions') ): ?>
 
     <section class="call-to-action">
-      <?php while( have_rows('call_to_actions') ): the_row();
-        $title = get_sub_field('title');
-        $desc = get_sub_field('description');
-        $page_link = get_sub_field('page_link_url');
-        $bk_img = get_sub_field('background_image'); ?>
+      <ul>
+        <?php while( have_rows('call_to_actions') ): the_row();
+          $title = get_sub_field('title');
+          $desc = get_sub_field('description');
+          $page_link = get_sub_field('page_link_url');
+          $bk_img = get_sub_field('background_image'); ?>
 
-      <div class="inner-wrapper">
-        <a href='<?php echo esc_url( $page_link ); ?>'>
-
+        <li>
+          <a href='<?php echo esc_url( $page_link ); ?>'>
+            <span class='title'><?php echo esc_html( $title ); ?></span>
+            <span class='desc'><?php echo esc_html( $desc ); ?></span>
+          </a>
           <?php if( $bk_img ) : ?>
             <img src="<?php echo esc_url( $bk_img['sizes']['home-cta-img'] ); ?>" alt="<?php echo esc_attr( $bk_img['alt'] ); ?>" description="<?php echo esc_attr( $bk_img['description'] ); ?>">
           <?php endif; ?>
+        </li>
+        <?php endwhile; ?>
 
-          <?php if( $title || $desc ) : ?>
+      </ul>
 
-            <div class='title-container'>
-
-              <span class='title'><?php echo esc_html( $title ); ?></span>
-              <span class='desc'><?php echo esc_html( $desc ); ?></span>
-
-            </div>
-
-          <?php endif; ?>
-
-        </a>
-      </div>
-      <?php endwhile; ?>
     </section>
 
     <?php endif;
