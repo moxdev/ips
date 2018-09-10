@@ -100,7 +100,20 @@
   padding-bottom: $padding + rem;
 }
 
-// Outside padding
+// Left Outside padding
+@mixin padding-left($padding-sm: map-get($outer_spacing, small), $padding-lg: map-get($outer_spacing, medium), $padding-xlg: map-get($outer_spacing, xlarge)) {
+	padding-left: $padding-sm + rem;
+
+	@include respond-to(small) {
+		padding-left: $padding-lg + rem;
+  }
+
+  @include respond-to(large) {
+    padding-left: $padding-xlg + rem;
+  }
+}
+
+// Right Outside padding
 @mixin padding-right($padding-sm: map-get($outer_spacing, small), $padding-lg: map-get($outer_spacing, medium), $padding-xlg: map-get($outer_spacing, xlarge)) {
 	padding-right: $padding-sm + rem;
 

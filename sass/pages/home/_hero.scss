@@ -1,10 +1,22 @@
 .hero {
   position: relative;
-  // z-index: -1;
   width: 100%;
-  // height: 250px;
+  min-height: 550px;
+  max-height: 750px;
   overflow: hidden;
-  padding-bottom: 3em;
+  margin-bottom: 3em;
+
+  >* {
+    @include test(red);
+  }
+
+  @include respond-to(small) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+
+  }
 
   &:after {
     content: '';
@@ -19,6 +31,7 @@
   }
 
   img {
+    display: block;
     object-fit: cover;
     font-family: "object-fit: cover";
     width: 100%;
@@ -30,17 +43,36 @@
   .services-container {
     position: relative;
     z-index: 50;
-    padding-top: 6em;
+    padding-top: 7em;
+
+    >* {
+      @include test(red);
+    }
+
+    @include respond-to(small) {
+      flex: 1;
+      display: flex;
+      align-items: baseline;
+      padding-top: 0;
+    }
 
     span {
       display: inline-block;
       width: 90%;
-      border-top: 3px solid $color__brand-2;
+      border-top: 4px solid $color__brand-2;
 
+      @include respond-to(small) {
+        flex:1 1 40%;
+        padding-bottom: 2px;
+      }
     }
 
     .services-list {
       font-size: 1.1em;
+
+      @include respond-to(small) {
+        flex:1 1 60%;
+      }
 
       ul {
         list-style-type: none;
@@ -49,33 +81,57 @@
 
         li {
           font-family: $font__medium;
-          line-height: 2.2;
+          // line-height: 2.2;
+          margin-bottom: 1.3rem;
 
           &:before {
             content: '\002D';
-            margin-right: 1em;
+            margin-right: .5em;
           }
         }
       }
+    }
+
+    @include respond-to(small) {
+
     }
   }
 
   .callout-container {
     position: relative;
     z-index: 50;
-    @include padding-left-right;
-    padding-right:0;
+    @include padding-left;
+    padding-right: 0;
+    margin-right: 0;
+
+    >* {
+      @include test(red);
+    }
+
+    @include respond-to(small) {
+      flex: 1;
+      margin-top: 4em;
+    }
 
     .title-container {
       @include padding-right;
       margin: 1.5em 0 1em;
+
+      @include respond-to(small) {
+
+      }
     }
 
     .title {
+      max-width: 300px;
       font-size: 3.529em;
       font-family: $font__bold;
       line-height: 1;
       margin-bottom: .1em;
+
+      @include respond-to(x-small) {
+        max-width: none;
+      }
     }
 
     .subtitle {
@@ -83,23 +139,24 @@
       font-family: $font__bold;
       line-height: 1.1;
     }
-  }
 
-  .button-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      padding-right: 0;
 
-    .btn {
+      @include respond-to(small) {
+        margin-top: 5em;
+      }
 
-    }
-
-    span {
-      display: inline-block;
-      border-top: 3px solid $color__brand-2;
-      width: 100%;
-      margin-left: 2em;
-      padding-bottom: 5px;
+      span {
+        display: inline-block;
+        border-top: 4px solid $color__brand-2;
+        width: 100%;
+        margin-left: 2em;
+        padding-bottom: 5px;
+      }
     }
   }
 }

@@ -10,7 +10,7 @@
   @include padding-left-right;
   padding-top: 0.75rem;
   padding-bottom: 0.5rem;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(240, 240, 240, .5);
 
   @include respond-to('large') {
     // align-items: flex-end;
@@ -19,8 +19,8 @@
   a[rel="home"] {
     svg {
       display: block;
-      width: 130px;
-      height: 57px;
+      width: 120px;
+      height: 55px;
 
       @include respond-to('small') {
         max-width: 150px;
