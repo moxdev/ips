@@ -52,7 +52,7 @@
 
 						<div class='phone-section'>
 							<h2><?php echo esc_html( $phone_section['phone_section_title'] ); ?></h2>
-							<span><?php echo esc_html( $phone_section['phone_number'] ); ?></span>
+							<a href='tel:<?php echo esc_html( $phone_section['phone_number'] ); ?>'><?php echo esc_html( $phone_section['phone_number'] ); ?></a>
 						</div>
 
 					<?php endif;
@@ -61,7 +61,7 @@
 
 						<div class='email-section'>
 							<h2><?php echo esc_html( $email_section['email_section_title'] ); ?></h2>
-							<span><?php echo esc_html( $email_section['email_address'] ); ?></span>
+							<a href='mailto:<?php echo esc_html( $email_section['email_address'] ); ?>'><?php echo esc_html( $email_section['email_address'] ); ?></a>
 						</div>
 
 					<?php endif;

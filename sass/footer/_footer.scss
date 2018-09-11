@@ -2,22 +2,71 @@
   background-color: $color__brand-1;
   color: #fff;
 
+
+  h2 {
+    color: $color__brand-2;
+    text-transform: uppercase;
+
+    @include respond-to(medium) {
+      // margin-top: 0;
+
+    }
+  }
+
   .site-info {
     @include padding-left-right;
     @include section-padding(1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    flex: 0 0 100%;
+    @include test(white);
+
+    @include respond-to(medium) {
+      flex: 1;
+      padding: 10px;
+
+    }
+  }
+
+  .column.branding, .column.social {
+    flex: 1 1 50%;
+
+    @include respond-to(medium) {
+      flex: 1;
+    };
   }
 
   .branding {
+
+
     svg {
       width: 100px;
       height: 50px;
     }
   }
 
+  .social {
+
+    @include respond-to(medium) {
+      order: 5;
+
+    }
+
+  }
+
   #menu-footer-menu {
+    display: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    @include respond-to(small) {
+      display: block;
+    }
 
     a {
       text-decoration: none;
@@ -27,6 +76,21 @@
         content: '\002D';
         margin-right: 1em;
       }
+    }
+  }
+
+  .phone-section {
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .email-section {
+    a {
+      text-decoration: none;
+      color: #fff;
     }
   }
 }
