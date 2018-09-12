@@ -29,6 +29,7 @@ gulp.task('php', () => {
     .pipe(
       browserSync.reload({
         stream: true,
+        injectChanges: true
       })
     );
 });

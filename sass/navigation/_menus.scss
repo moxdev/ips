@@ -306,8 +306,9 @@
 
 /* Social Media */
 .social-media {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
+	// margin-top: 0;
+	// margin-bottom: 0.5rem;
+
 
 	@include respond-to('small') {
 		// margin-top: 2rem;
@@ -328,8 +329,8 @@
 
 	a {
 		display: block;
-		width: 20px;
-		height: 20px;
+		width: 30px;
+		height: 30px;
 		overflow: hidden;
 		text-indent: 100%;
 		white-space: nowrap;
@@ -349,29 +350,29 @@
 	}
 
 	.tw a {
-		background-position: -29px -4px;
+		background-position: -45px -4px;
 	}
 
 	.insta a {
-		background-position: -166px -4px;
+		background-position: -259px -4px;
 	}
 
 	.yt a {
-		width: 25px;
-		background-position: -110px -4px;
+		width: 35px;
+		background-position: -161px -4px;
 	}
 
 	.goo a {
-		width: 25px;
-		background-position: -56px -4px;
+		width: 35px;
+		background-position: -82px -4px;
 	}
 
 	.linked a {
-		background-position: -85px -4px;
+		background-position: -132px -4px;
 	}
 
 	.pin a {
-		background-position: -139px -4px;
+		background-position: -217px -4px;
 	}
 }
 
