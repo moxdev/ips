@@ -26,20 +26,38 @@
 }
 
 #main {
-  // display: flex;
+
+  @include respond-to(medium) {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+  }
 }
 
 hr.decoration-header {
-  width: 90%;
+  // width: 90%;
   margin: 3em 0;
   height: 2px;
+  @include test(red);
+
+  @include respond-to(medium) {
+    width: 10%;
+
+  }
 }
 
 .wrapper {
+  @include test(red);
   @include padding-left-right;
   // @include section-padding(2);
   padding-bottom: 2em;
   @include max-width($max_width_md);
+
+  @include respond-to(medium) {
+    // flex: 1 1 90%;
+
+  }
 
   @include respond-to(large) {
     max-width: $max_width_lg;
