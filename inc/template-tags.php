@@ -154,6 +154,8 @@ if ( ! function_exists( 'ips_page_titles' ) ) :
 	function ips_page_titles() {
 		if(function_exists('get_field')) {
 			$on_page_title = get_field('on_page_title');
+			$on_page_subtitle = get_field('on_page_subtitle');
+
 			if($on_page_title) { ?>
 				<header class="entry-header">
 					<h1 class="entry-title">
@@ -165,6 +167,17 @@ if ( ! function_exists( 'ips_page_titles' ) ) :
 								'strong' => array()
 							)
 						); ?>
+
+						<span class="entry-subtitle">
+							<?php echo wp_kses(
+								$on_page_subtitle,
+								array(
+									'span' => array(),
+									'em' => array(),
+									'strong' => array()
+								)
+							); ?>
+						</span>
 					</h1>
 				</header><!-- .entry-header -->
 			<?php } else { ?>

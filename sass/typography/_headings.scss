@@ -12,14 +12,19 @@ h1 {
 }
 
 h1.entry-title {
-	@include respond-to(small) {
-		font-size: 2.353em;
-	}
+	font-size: 3.529em;
+	line-height: 1;
+	margin-bottom: .4em;
 
-	@include respond-to(large) {
-		font-size: 3.529em;
+	.entry-subtitle {
+		display: block;
+		font-size: 1.765rem;
+		line-height: 1.3;
+		letter-spacing: 1px;
+		margin-top: .25em;
 	}
 }
+
 
 h2 {
 	font-family: $font__bold;
@@ -30,11 +35,11 @@ h2 {
 
 }
 
-h3 {
-	font-family: $font__bold;
+h2.entry-subtitle {
 	color: #000;
 }
 
-.entry-title {
-	margin-bottom: .25em;
+h3 {
+	font-family: $font__bold;
+	color: #000;
 }

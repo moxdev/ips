@@ -10,6 +10,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<hr class='decoration-header'>
 			<div class='wrapper'>
 
 				<?php
