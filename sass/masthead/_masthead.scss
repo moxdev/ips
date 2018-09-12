@@ -1,19 +1,14 @@
 #masthead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 300;
-  @include padding-left-right;
-  padding-top: 0.75rem;
-  padding-bottom: 0.5rem;
-  background-color: rgba(240, 240, 240, .5);
+  background-color: #fff;
 
-  @include respond-to('large') {
-    // align-items: flex-end;
+  .masthead-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(240, 240, 240, .5);
+    @include padding-left-right;
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
   }
 
   a[rel="home"] {
@@ -35,4 +30,12 @@
       display: block;
     }
   }
+}
+
+.home #masthead {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
 }
