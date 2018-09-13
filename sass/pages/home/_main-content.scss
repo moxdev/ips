@@ -7,6 +7,7 @@
 
     article {
       position: relative;
+      width: 100%;
 
       &:after {
         content: '';
@@ -29,12 +30,13 @@
         z-index:-1;
       }
 
-      .wrapper {
+      .frontpage-wrapper {
         position: relative;
         z-index: 300;
         color: #fff;
         @include section-padding(2);
         text-align: center;
+        @include max-width($max_width_md)
 
         h1 {
           color: #fff;

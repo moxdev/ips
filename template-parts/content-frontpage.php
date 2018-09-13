@@ -15,7 +15,7 @@
 		the_post_thumbnail('home-main-content-img', array('class' => 'home-main-content-img'));
 	endif; ?>
 
-	<div class='wrapper'>
+	<div class='frontpage-wrapper'>
 
 		<header class="entry-header">
 			<?php ips_page_titles(); ?>

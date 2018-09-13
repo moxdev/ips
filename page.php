@@ -17,7 +17,8 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<div class='wrapper'>
+			<div class='main-column main-decorative-column'></div>
+			<div class='main-wrapper'>
 
 				<?php
 				while ( have_posts() ) :
@@ -34,6 +35,7 @@ get_header();
 				?>
 
 			</div>
+			<div class='main-column'></div>
 		</main><!-- #main -->
 		<?php ips_default_flexible_content(); ?>
 		<?php ips_certifications_section(); ?>
