@@ -37,11 +37,14 @@
           if( $es_title || $es_subtitle ) : ?>
 
             <li class='estimate-callout'>
+              <div class='estimate-title-wrapper'>
+                <span class="estimate-title"><?php echo esc_html( $es_title ); ?></span>
+                <span class='estimate-subtitle'><?php echo esc_html( $es_subtitle ); ?></span>
+              </div>
 
-              <span class="estimate-title"><?php echo esc_html( $es_title ); ?></span>
-              <span class='estimate-subtitle'><?php echo esc_html( $es_subtitle ); ?></span>
-
-              <a class="btn" href='<?php echo esc_url( $es_button_page_link ); ?>'><?php echo $es_button_text; ?></a><span class='decoration-line'></span>
+              <div class='estimate-button-wrapper'>
+                <a class="btn" href='<?php echo esc_url( $es_button_page_link ); ?>'><?php echo $es_button_text; ?></a><span class='decoration-line'></span>
+              </div>
 
             </li>
 
