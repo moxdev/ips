@@ -10,47 +10,46 @@
 
     if( have_rows('highlights') ): ?>
 
-    <section class='services'>
+    <section id='services'>
+      <ul>
+        <?php while( have_rows('highlights') ): the_row();
+        $link_text = get_sub_field('link_text');
+        $link_page_url = get_sub_field('link_page_url');
+        $service_img = get_sub_field('background_image'); ?>
 
-      <?php while( have_rows('highlights') ): the_row();
-
-      $link_text = get_sub_field('link_text');
-      $link_page_url = get_sub_field('link_page_url');
-      $service_img = get_sub_field('background_image'); ?>
-
-      <div class="inner-wrapper">
-        <a href='<?php echo esc_url( $link_page_url ); ?>'>
-
+        <li>
+          <a href='<?php echo esc_url( $link_page_url ); ?>'>
+            <span class='title'><?php echo esc_html( $link_text ); ?></span>
+          </a>
           <?php if( $service_img ) : ?>
             <img src="<?php echo esc_url( $service_img['sizes']['home-cta-img'] ); ?>" alt="<?php echo esc_attr( $service_img['alt'] ); ?>" description="<?php echo esc_attr( $service_img['description'] ); ?>">
           <?php endif; ?>
+        </li>
 
-          <?php if( $link_text ) : ?>
+        <?php endwhile; ?>
 
-            <span class='title'><?php echo esc_html( $link_text ); ?></span>
+        <?php if( function_exists( 'get_field' ) ) :
+          $es_title = get_field( 'title', 'estimate-callout' );
+          $es_subtitle = get_field( 'subtitle', 'estimate-callout' );
+          $es_button_text = get_field( 'button_text', 'estimate-callout' );
+          $es_button_page_link = get_field( 'button_page_link', 'estimate-callout' );
+
+          if( $es_title || $es_subtitle ) : ?>
+
+            <li class='estimate-callout'>
+
+              <span class="estimate-title"><?php echo esc_html( $es_title ); ?></span>
+              <span class='estimate-subtitle'><?php echo esc_html( $es_subtitle ); ?></span>
+
+              <a class="btn" href='<?php echo esc_url( $es_button_page_link ); ?>'><?php echo $es_button_text; ?></a><span class='decoration-line'></span>
+
+            </li>
 
           <?php endif; ?>
 
-        </a>
-      </div>
+        <?php endif; ?>
 
-      <?php endwhile; ?>
-
-      <?php if( function_exists( 'get_field' ) ) :
-        $title = get_field( 'title', 'estimate-callout' );
-        $subtitle = get_field( 'subtitle', 'estimate-callout' );
-        $button_text = get_field( 'button_text', 'estimate-callout' );
-        $button_page_link = get_field( 'button_page_link', 'estimate-callout' ); ?>
-
-        <div class='inner-wrapper estimate-callout'>
-
-          <span class="estimate-title"><?php echo esc_html( $title ); ?></span>
-          <span class='subtitle'><?php echo esc_html( $subtitle ); ?></span>
-          <a class="btn" href='<?php echo esc_url( $button_page_link ); ?>'><?php echo $button_text; ?></a>
-
-        </div>
-
-      <?php endif; ?>
+      </ul>
 
     </section>
 

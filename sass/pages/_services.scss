@@ -1,36 +1,91 @@
 .page-template-page-services {
-  .services {
+  #services {
 
-    .inner-wrapper {
+    ul {
       position: relative;
+      margin:0;
+      padding: 0;
+      list-style-type: none;
+      @include test(green);
+
+      @include respond-to(medium) {
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: center;
+      }
+
+      li {
+        overflow: hidden;
+        @include padding-left-right;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        position: relative;
+        z-index: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: flex-start;
+        border-bottom: 1px solid #FFF;
+        @include test(red);
+
+
+        @include respond-to(medium) {
+          flex: 0 0 33.333%;
+
+          &:nth-child(odd), &:nth-child(even) {
+            border-right: 1px solid #FFF;
+          }
+
+          &:nth-child(3n+3) {
+            border-right: none;
+          }
+
+        }
+      }
+
+      img {
+        display: block;
+        object-fit: cover;
+        font-family: 'object-fit: cover';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        // For some reason, IE11 seems to need this
+        left: 0;
+        top: 0;
+      }
 
       a {
+        position: relative;
+        z-index: 10;
         color: #fff;
         text-decoration: none;
       }
 
-      img {
-        object-fit: cover;
-        font-family: "object-fit: cover";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index:-1;
-        display: block;
+      span {
+        display: inline-block;
       }
 
       .title {
-        display: inline-block;
+        position: relative;
         font-size: 2em;
-        @include padding-left-right;
-        padding-top: 5em;
-        padding-bottom: 5em;
+        line-height: 1.2;
 
         &:before {
           content: '';
-          position: absolute;
           border-top: 2px solid $color__brand-2;
-          width: 40%;
+          width: 175px;
+          position: absolute;
+          top: -15px;
+          left: 0;
+        }
+
+        &:after {
+          content: '\003e';
+          margin-left: 10px;
+          line-height: 0;
+          vertical-align: middle;
         }
       }
     }
@@ -42,26 +97,45 @@
       .estimate-title {
         position: absolute;
         font-size: 3em;
+        font-family: $font__black;
+        letter-spacing: 3px;
         background-color: $color__brand-2;
         @include padding-left-right;
         top: 1.5em;
         left: 1.875rem;
         width: 65%;
         text-transform: uppercase;
+        // width: auto;
+        // margin: auto;
+        @include test(white);
       }
 
-      .subtitle {
+      .estimate-subtitle {
         display: inline-block;
         font-size: 2em;
-        @include padding-left-right;
-        padding-top: 5em;
-        padding-bottom: 5em;
+        font-family: $font__bold;
+        line-height: 1.2;
+        // width: auto;
+        // margin: auto;
+        @include test(white);
+        // @include padding-left-right;
+        // padding-top: 5em;
+        // padding-bottom: 5em;
       }
 
       .btn {
         position: absolute;
-        bottom: 100px;
+        bottom: 3em;
         left: 1.875rem;
+        @include test(white);
+      }
+
+      .decoration-line {
+        position: absolute;
+        bottom: 3em;
+        width: 100%;
+        height: 2px;
+        background-color: $color__brand-2;
       }
     }
   }
