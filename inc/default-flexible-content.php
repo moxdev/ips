@@ -24,21 +24,23 @@ endif;
  if (! function_exists( 'ips_flexible_gallery_section' ) ) :
   function ips_flexible_gallery_section() { ?>
 
-    <section class="acf-flex-content-area photo-gallery">
+    <section id="photo-gallery" class="acf-flex-content-area">
       <?php
       $imgs = get_sub_field('gallery_images');
       if( $imgs ) { ?>
-        <div class="wrapper">
-          <ul class="gallery-list">
-            <?php foreach($imgs as $img) { ?>
-              <li>
-                <a data-imagelightbox="gallery" data-ilb2-caption="<?php echo esc_attr( $img['caption'] ); ?>" href="<?php echo esc_attr( $img['url'] ); ?>" class="item">
-                  <img src="<?php echo esc_url( $img['sizes']['home-cta-img'] ); ?>" alt="<?php echo esc_attr( $img['alt'] ); ?>" description="<?php echo esc_attr( $img['description'] ); ?>">
-                </a>
-              </li>
-            <?php } ?>
-          </ul>
-        </div>
+        <ul class="gallery-list">
+          <?php foreach($imgs as $img) { ?>
+            <li>
+              <a data-imagelightbox="gallery" data-ilb2-caption="<?php echo esc_attr( $img['caption'] ); ?>" href="<?php echo esc_attr( $img['url'] ); ?>" class="item">
+                <img src="<?php echo esc_url( $img['sizes']['thumb-lg'] ); ?>" alt="<?php echo esc_attr( $img['alt'] ); ?>" description="<?php echo esc_attr( $img['description'] ); ?>">
+              </a>
+              <!-- Figur out srcsets -->
+              <!-- <a data-imagelightbox="gallery" data-ilb2-caption="<?php // echo esc_attr( $img['caption'] ); ?>" href="<?php // echo esc_attr( $img['url'] ); ?>" class="item">
+                <img src="<?php // echo esc_attr( $img['sizes']['thumbnail'] ); ?>" srcset="<?php // echo esc_attr($img['sizes']['thumbnail']) . ' 150w, ' . esc_attr($img['sizes']['thumb-md']) . ' 300w, ' . esc_attr($img['sizes']['thumb-lg']) . ' 600w, ' . esc_attr($img['sizes']['thumb-xl']) . ' 900w'; ?>" sizes="(min-width: 550px) 275px, (min-width: 950px) 375px, 250px" alt="<?php // echo esc_attr( $img['alt'] ); ?>">
+              </a> -->
+            </li>
+          <?php } ?>
+        </ul>
         <?php function gallery_js() { ?>
           <script>
             jQuery('a[data-imagelightbox="gallery"]').imageLightbox({

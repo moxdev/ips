@@ -46,6 +46,9 @@ if ( ! function_exists( 'ips_setup' ) ) :
 		add_image_size( 'home-cta-img', 450, 350, true );
 		add_image_size( 'home-cert-img', 175, 9999, false );
 		add_image_size( 'services-highlight-img', 450, 350, true );
+		add_image_size( 'thumb-md', 300, 200, true );
+		add_image_size( 'thumb-lg', 600, 500, true );
+		add_image_size( 'thumb-xl', 900, 800, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -234,6 +237,14 @@ function ips_add_arrow( $item_output, $item, $depth, $args ){
 	}
 	return $item_output;
 }
+
+/**
+ * Move Yoast to bottom
+ */
+function yoast_to_bottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoast_to_bottom');
 
 /**
  * Implement the Custom Header feature.
