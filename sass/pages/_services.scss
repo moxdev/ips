@@ -1,4 +1,5 @@
 .page-template-page-services {
+
   #services {
 
     ul {
@@ -15,16 +16,14 @@
       li {
         overflow: hidden;
         @include padding-left-right;
-        padding-top: 8rem;
-        padding-bottom: 8rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
         position: relative;
         z-index: 300;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // align-items: flex-start;
         border-bottom: 1px solid #FFF;
-        @include test(red);
 
         @media only screen and (min-width: 650px) {
           flex: 0 0 50%;
@@ -33,6 +32,8 @@
 
         @include respond-to(medium) {
           flex: 0 0 33.333%;
+          padding-top: 8em;
+          padding-bottom: 8em;
 
           &:nth-child(odd), &:nth-child(even) {
             border-right: 1px solid #FFF;
@@ -43,10 +44,14 @@
           }
         }
 
-        @include respond-to(x-large) {
-          // padding-top: 10em;
-          // padding-bottom: 10em;
+        @include respond-to(xx-large) {
+          padding-top: 10em;
+          padding-bottom:10em;
+        }
 
+        @include respond-to(xxx-large) {
+          padding-top: 12em;
+          padding-bottom:12em;
         }
       }
 
@@ -76,13 +81,14 @@
 
       .title {
         position: relative;
-        font-size: 2em;
+        font-size: 1.765rem;
         line-height: 1.2;
+        @include test(red);
 
         &:before {
           content: '';
           border-top: 2px solid $color__brand-2;
-          width: 175px;
+          width: 150px;
           position: absolute;
           top: -15px;
           left: 0;
@@ -100,50 +106,75 @@
     .estimate-callout {
       background-color: $color__brand-1;
       color: #fff;
-      padding: 2em 0;
+      padding: 4em 0;
 
       .estimate-title-wrapper {
         @include padding-left-right;
-        max-width: 375px;
+        max-width: 90%;
+
+        @include respond-to(x-small) {
+          max-width: 70%;
+        }
+
+        @media only screen and (min-width: 650px) {
+          max-width: 100%;
+        }
+
+        @include respond-to(xx-large) {
+          max-width: 80%;
+        }
+
+        @include respond-to(xxx-large) {
+          max-width: 70%;
+        }
       }
 
       .estimate-title {
-        font-size: 3em;
+        font-size: 3.53rem;
         font-family: $font__black;
         letter-spacing: 3px;
         background-color: $color__brand-2;
         text-transform: uppercase;
         width: 100%;
         padding-left: 1.875rem;
-        @include test(white);
+        margin-bottom: 1rem
       }
 
       .estimate-subtitle {
         display: inline-block;
         padding-left: 1.875rem;
         width: 100%;
-        font-size: 2em;
+        font-size: 1.765rem;
         font-family: $font__bold;
         line-height: 1.2;
+        margin-bottom: 1rem;
         @include test(white);
       }
 
       .estimate-button-wrapper {
         @include padding-left;
         display: flex;
-        justify-content: center;
+        // justify-content: flex-end;
         align-items: center;
-        @include test(white);
+        // margin-bottom: 1rem
       }
+
       .btn {
         margin-left: 1.875rem;
+        // padding: 1.2rem rem 1rem;
+        min-width: 200px;
+
+        @include respond-to(x-large) {
+          min-width: 250px;
+
+        }
       }
 
       .decoration-line {
         width: 100%;
+        height: 4px;
         margin-left: 2em;
         margin-top: 15px;
-        height: 2px;
         background-color: $color__brand-2;
       }
     }
