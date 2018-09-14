@@ -1,18 +1,15 @@
-.home #masthead {
-  background-color: transparent;
-}
-
 #masthead {
   background-color: #fff;
   position: relative;
+  z-index: 99999;
 
   .masthead-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(240, 240, 240, .5);
-    padding-top: 0.75rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   a[rel="home"] {
@@ -22,7 +19,13 @@
       height: 55px;
 
       @include respond-to('small') {
-        max-width: 150px;
+        width: 150px;
+        height: 68px;
+      }
+
+      @include respond-to('large') {
+        width: 175px;
+        height: 80px;
       }
     }
   }
@@ -37,6 +40,7 @@
   }
 
   .phone {
+    font-family: $font__bold;
     display: none;
     text-transform: uppercase;
 
@@ -47,6 +51,7 @@
     .number {
       color: $color__brand-2;
       font-size: 1.765rem;
+      margin-left: 1rem;
     }
 
     @include respond-to('large') {
@@ -61,4 +66,5 @@
   left: 0;
   right: 0;
   z-index: 300;
+  background-color: transparent;
 }
