@@ -1,6 +1,5 @@
 #masthead {
-  background-color: #fff;
-  @include test(blue);
+  // background-color: #fff;
 
   .masthead-wrapper {
     display: flex;
@@ -25,12 +24,12 @@
   }
 
   .site-branding {
-    @include test(red);
+
     @include padding-left;
   }
 
   .phone-menu-container {
-    @include test(red);
+
   }
 
   .phone {

@@ -142,6 +142,16 @@
 	}
 }
 
+@mixin margin-right($margin-sm: map-get($outer_spacing, small), $margin-lg: map-get($outer_spacing, medium)) {
+	// margin-left: $margin-sm + rem;
+	margin-right: $margin-sm + rem;
+
+	@include respond-to(small) {
+		// margin-left: $margin-lg + rem;
+		margin-right: $margin-lg + rem;
+	}
+}
+
 // This mixin can be used to set the object-fit:
 // @include object-fit(contain);
 
