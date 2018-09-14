@@ -58,6 +58,7 @@
 		letter-spacing: 1px;
 		@include font-smooth;
 		position: relative;
+		z-index: 30;
 
 		@include respond-to('large') {
 			padding-top: .5rem;
@@ -65,14 +66,14 @@
 		}
 
 		ul.sub-menu {
-			position: relative;
-			z-index: 99999;
 			padding: 0;
 
 			@include respond-to('large') {
 				position: absolute;
+				z-index: 99999;
 				top: 100%;
 				left: -999em;
+				background-color: rgba(240, 240, 240, 1);
 			}
 
 			ul {
