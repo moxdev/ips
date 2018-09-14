@@ -6,6 +6,7 @@
 	z-index: -1;
 	transition: transform 0.5s ease-in-out;
 	transform: translateY(-9999em); // Start way off canvas
+	@include test(green);
 
 	@include respond-to('large') {
 		transform: none!important;
@@ -44,6 +45,9 @@
 	ul {
 		list-style: none;
 		margin: 0;
+		padding: 0;
+		@include padding-right;
+		border-top: 4px solid $color__brand-1;
 
 		ul {
 			z-index: 99999;
@@ -123,6 +127,14 @@
 
 		&:hover > a,
 		&.focus > a {
+		}
+
+		&:first-child {
+			margin-left: 0;
+
+			a {
+				margin-left: 0;
+			}
 		}
 	}
 

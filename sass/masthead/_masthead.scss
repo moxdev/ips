@@ -1,12 +1,13 @@
 #masthead {
   background-color: #fff;
+  @include test(blue);
 
   .masthead-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(240, 240, 240, .5);
-    @include padding-left-right;
+    // @include padding-left-right;
     padding-top: 0.75rem;
     padding-bottom: 0.5rem;
   }
@@ -23,8 +24,27 @@
     }
   }
 
+  .site-branding {
+    @include test(red);
+    @include padding-left;
+  }
+
+  .phone-menu-container {
+    @include test(red);
+  }
+
   .phone {
     display: none;
+    text-transform: uppercase;
+
+    .title {
+      color: #909090;
+    }
+
+    .number {
+      color: $color__brand-2;
+      font-size: 1.765rem;
+    }
 
     @include respond-to('large') {
       display: block;

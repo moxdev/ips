@@ -43,8 +43,8 @@
 					if( $phone_section ): ?>
 
 						<div class='phone'>
-							<span><?php echo esc_html( $phone_section['phone_section_title'] ); ?></span>
-							<span><?php echo esc_html( $phone_section['phone_number'] ); ?></span>
+							<span class="title"><?php echo esc_html( $phone_section['phone_section_title'] ); ?></span>
+							<span class="number"><?php echo esc_html( $phone_section['phone_number'] ); ?></span>
 						</div>
 
 					<?php	endif; ?>
