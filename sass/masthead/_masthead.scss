@@ -1,12 +1,16 @@
+.home #masthead {
+  background-color: transparent;
+}
+
 #masthead {
-  // background-color: #fff;
+  background-color: #fff;
+  position: relative;
 
   .masthead-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(240, 240, 240, .5);
-    // @include padding-left-right;
     padding-top: 0.75rem;
     padding-bottom: 0.5rem;
   }

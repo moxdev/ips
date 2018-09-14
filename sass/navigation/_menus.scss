@@ -6,12 +6,17 @@
 	z-index: 9999;
 	transition: transform 0.5s ease-in-out;
 	transform: translateY(-9999em); // Start way off canvas
+	background-color: $color__brand-1;
+	@include section-padding(1);
 
 	@include respond-to('large') {
+		background-color: transparent;
 		transform: none!important;
 		position: relative;
 		z-index: 1;
 		margin-left: auto;
+		padding-top: 0;
+		padding-bottom: 0;
 
 		> ul {
 			display: flex;
@@ -46,6 +51,9 @@
 		margin: 0;
 		padding: 0;
 		border-top: 4px solid $color__brand-1;
+		font-family: $font__bold;
+		letter-spacing: 1px;
+		@include font-smooth;
 
 		@include respond-to('large') {
 			@include padding-right;
@@ -73,9 +81,10 @@
 			}
 
 			a {
-				// font-family: $font__main;
+				font-family: $font__main;
+				font-size: 1.125em;
 				text-transform: none;
-				letter-spacing: normal;
+				letter-spacing: .9px;
 
 				&, &:hover {
 					color: #FFF;
@@ -126,6 +135,7 @@
 
 	li {
 		position: relative;
+		margin-bottom: 1em;
 
 		&:hover > a,
 		&.focus > a {
@@ -147,11 +157,12 @@
 		color: #FFF;
 		// font-family: $font__alt-heavy;
 		text-transform: uppercase;
-		font-size: 1.125em;
+		font-size: 1.176em;
 		letter-spacing: 0.0625em;
 		text-decoration: none;
 
 		@include respond-to('large') {
+			font-size: 1.125em;
 			padding: 0.25rem 0;
 			margin: 0.5rem;
 			color: #000;
@@ -195,6 +206,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		border: none;
+		line-height: 0;
+		font-size: 1.5em;
+		font-family: $font__bold;
+		outline: 0;
 
 		@include respond-to('large') {
 			display: none;
@@ -203,13 +219,13 @@
 		&:after {
 			content: '\2228';
 			display: block;
-			margin-top: -12px;
+			margin-top: -22px;
 			transition: transform 0.25s, margin-top 0.25s;
 		}
 
 		&.active:after {
 			transform: rotate(180deg);
-			margin-top: -2px;
+			margin-top: -15px;
 		}
 	}
 }
