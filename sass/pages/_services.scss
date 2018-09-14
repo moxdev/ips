@@ -16,21 +16,32 @@
       li {
         overflow: hidden;
         @include padding-left-right;
-        padding-top: 10rem;
-        padding-bottom: 10rem;
         position: relative;
         z-index: 300;
         display: flex;
         flex-direction: column;
         justify-content: center;
         border-bottom: 1px solid #FFF;
+        padding-top: 9em;
+        padding-bottom: 9em;
+
+        @include respond-to(mobile) {
+          padding-top: 11em;
+          padding-bottom: 11em;
+        }
 
         @media only screen and (min-width: 650px) {
           flex: 0 0 50%;
+          padding-top: 9em;
+          padding-bottom: 9em;
         };
 
-
         @include respond-to(medium) {
+          padding-top: 10em;
+          padding-bottom: 10em;
+        };
+
+        @include respond-to(large) {
           flex: 0 0 33.333%;
           padding-top: 8em;
           padding-bottom: 8em;
@@ -50,8 +61,8 @@
         }
 
         @include respond-to(xxx-large) {
-          padding-top: 12em;
-          padding-bottom:12em;
+          padding-top: 14em;
+          padding-bottom:14em;
         }
       }
 
@@ -66,6 +77,16 @@
         // For some reason, IE11 seems to need this
         left: 0;
         top: 0;
+
+        &:hover {
+          cursor: pointer;
+          -webkit-filter: brightness(70%);
+          -webkit-transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -o-transition: all 1s ease;
+          -ms-transition: all 1s ease;
+          transition: all 1s ease;
+        }
       }
 
       a {
@@ -83,7 +104,7 @@
         position: relative;
         font-size: 1.765rem;
         line-height: 1.2;
-        // @include test(red);
+        text-shadow: #111 0.1em 0.1em 0.2em, #333 0.1em 0.1em 0.2em;
 
         &:before {
           content: '';
@@ -99,6 +120,7 @@
           margin-left: 10px;
           line-height: 0;
           vertical-align: middle;
+          font-size: 1.5em;
         }
       }
     }
@@ -106,7 +128,15 @@
     .estimate-callout {
       background-color: $color__brand-1;
       color: #fff;
-      padding: 4em 0;
+      padding: 2em 0;
+
+      @include respond-to(mobile) {
+        padding: 5.5em 0;
+      }
+
+      @media only screen and (min-width: 650px) {
+        padding: 3em 0;
+      };
 
       .estimate-title-wrapper {
         @include padding-left-right;
@@ -148,7 +178,6 @@
         font-family: $font__bold;
         line-height: 1.2;
         margin-bottom: 1rem;
-        @include test(white);
       }
 
       .estimate-button-wrapper {

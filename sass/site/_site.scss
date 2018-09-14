@@ -17,7 +17,7 @@
 
 #content {
   background-color: #fff;
-  // position: relative;
+  position: relative;
 }
 
 #primary {
@@ -26,11 +26,10 @@
 }
 
 #main {
-
   @include respond-to(medium) {
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    // align-items: baseline;
 
   }
 }
@@ -39,27 +38,21 @@
   width: 100%;
 
   @include respond-to(medium) {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
   }
 }
 
 .main-decorative-column {
   width: 90%;
-  height: 2px;
-  margin: 3em 0;
-  border: 2px solid $color__brand-2;
-
-  @include respond-to(medium) {
-    width: 100%;
-    flex: 0 0 auto;
-  }
+  margin-top: 4em;
+  border-top: 5px solid $color__brand-2;
 }
 
 .main-wrapper {
   flex: 0 0 75%;
   @include max-width($max_width_md);
   @include padding-left-right;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 
   @include respond-to(large) {
     max-width: $max_width_lg;

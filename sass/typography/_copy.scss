@@ -12,12 +12,14 @@ blockquote {
 	position: relative;
 
 	&:before {
-		content: "\0022";
+		content: "\201C";
 		position: absolute;
-		font-size: 3em;
-		top: 22px;
-		left: -20px;
+		font-size: 4.13rem;
+		top: 30px;
+		left: -35px;
 		line-height: 0;
+		color: $color__brand-2;
+		font-family: $font__medium;
 	}
 
 	p {
