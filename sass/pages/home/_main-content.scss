@@ -37,7 +37,12 @@
         @include section-padding(2);
         @include padding-left-right;
         text-align: center;
-        @include max-width($max_width_md)
+        @include max-width($max_width_md);
+
+        @include respond-to(large) {
+          @include max-width($max_width_lg);
+
+        }
 
         h1.entry-title {
           color: #fff;

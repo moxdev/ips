@@ -29,6 +29,8 @@
 
         @include respond-to(medium) {
           flex: 0 0 33.333%;
+          padding-top: 7em;
+          padding-bottom: 7em;
 
           &:nth-child(odd), &:nth-child(even) {
             border-right: 1px solid #FFF;
@@ -37,7 +39,21 @@
           &:nth-child(3n+3) {
             border-right: none;
           }
+        }
 
+        @include respond-to(large) {
+          padding-top: 9em;
+          padding-bottom: 9em;
+        }
+
+        @include respond-to(xx-large) {
+          padding-top: 11em;
+          padding-bottom: 11em;
+        }
+
+        @include respond-to(xxx-large) {
+          padding-top: 13em;
+          padding-bottom: 13em;
         }
       }
 
@@ -63,10 +79,17 @@
 
       span {
         display: inline-block;
+        text-shadow: 1px 0px 15px #000, 0px 1px 15px #000,
+        // 2px 1px 20px #000, 1px 2px 20px #000,
+        // 3px 2px 20px #000, 2px 3px 20px #000;
+        // 4px 3px 20px #000, 3px 4px 20px #000,
+        // 5px 4px 20px #000, 4px 5px 20px #000,
+        // 6px 5px 20px #000, 5px 6px 20px #000,
+        // 7px 6px 20px #000;
       }
 
       .title {
-        border-top: 2px solid $color__brand-2;
+        border-top: 3px solid $color__brand-2;
         font-size: 2em;
         width: auto;
         margin: auto;
