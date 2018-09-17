@@ -17,7 +17,7 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 0;
-	padding: 3px;
+	padding: .5em 1em;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -25,14 +25,22 @@ textarea {
 }
 
 select {
+	background: transparent;
+	width: 100%;
 	border: 1px solid $color__border-input;
 	border-radius: 0;
-	width: 100%;
+	color: #000;
 	margin-bottom: 1em;
+	padding: .5em 1em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-border-radius: 0px;
+	-webkit-padding: .5em 1em;
 }
 
 textarea {
 	width: 100%;
+	padding: .5em 1em;
 }
 
 input, textarea {
@@ -43,4 +51,24 @@ input, textarea {
 
 input[type="submit"] {
 	width: 50%;
+}
+
+input::placeholder,
+textarea::placeholder {
+		color: #000;
+		opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+				color: #000;
+}
+
+input::-ms-input-placeholder, /* Microsoft Edge */
+textarea::-ms-input-placeholder { /* Microsoft Edge */
+				color:#000;
+}
+
+input[type="submit"] {
+	margin-top: 1rem;
 }

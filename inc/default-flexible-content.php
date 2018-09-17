@@ -32,7 +32,7 @@ endif;
           <?php foreach($imgs as $img) { ?>
             <li>
               <a data-imagelightbox="gallery" data-ilb2-caption="<?php echo esc_attr( $img['caption'] ); ?>" href="<?php echo esc_attr( $img['url'] ); ?>" class="item">
-                <img src="<?php echo esc_url( $img['sizes']['thumb-lg'] ); ?>" alt="<?php echo esc_attr( $img['alt'] ); ?>" description="<?php echo esc_attr( $img['description'] ); ?>">
+                <img src="<?php echo esc_url( $img['sizes']['portfolio-img'] ); ?>" alt="<?php echo esc_attr( $img['alt'] ); ?>" description="<?php echo esc_attr( $img['description'] ); ?>">
               </a>
               <!-- Figur out srcsets -->
               <!-- <a data-imagelightbox="gallery" data-ilb2-caption="<?php // echo esc_attr( $img['caption'] ); ?>" href="<?php // echo esc_attr( $img['url'] ); ?>" class="item">

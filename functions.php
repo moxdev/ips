@@ -46,9 +46,16 @@ if ( ! function_exists( 'ips_setup' ) ) :
 		add_image_size( 'home-cta-img', 450, 350, true );
 		add_image_size( 'home-cert-img', 175, 9999, false );
 		add_image_size( 'services-highlight-img', 450, 350, true );
-		add_image_size( 'thumb-md', 300, 200, true );
-		add_image_size( 'thumb-lg', 600, 500, true );
-		add_image_size( 'thumb-xl', 900, 800, true );
+		add_image_size( 'main-content-img', 400, 300, true );
+		add_image_size( 'portfolio-img', 450, 350, true );
+
+		// Register service child image sizes for use in Add Media modal
+		add_filter( 'image_size_names_choose', 'ips_custom_sizes' );
+		function ips_custom_sizes( $sizes ) {
+			return array_merge( $sizes, array(
+				'main-content-img' => __( 'Main Content Image' ),
+			) );
+		}
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -302,6 +309,11 @@ require get_template_directory() . '/inc/certification-section.php';
  * Services Highlights section.
  */
 require get_template_directory() . '/inc/services-highlights.php';
+
+/**
+ * Services Child Estimate Callout section.
+ */
+require get_template_directory() . '/inc/estimate-call-out-global.php';
 
 
 

@@ -1,7 +1,6 @@
 button,
 input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type="reset"] {
 	border: 1px solid;
 	border-color: $color__border-button;
 	border-radius: 3px;
@@ -19,6 +18,27 @@ input[type="submit"] {
 	&:focus {
 		border-color: $color__border-button-focus;
 	}
+}
+
+input[type="submit"] {
+	display: inline-block;
+	font-family: $font__black_italic;
+	color: $color__brand-1;
+	border: 3px solid $color__brand-2;
+	background: transparent;
+	letter-spacing: 1px;
+	min-width: 175px;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 1em;
+	border-radius: 0;
+	font-size: 14.4px;
+	font-size: 1.176em;
+	line-height: 1;
+	padding: 1.2rem 1.2rem 1rem;
+	-webkit-appearance: none;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
 }
 
 .btn {

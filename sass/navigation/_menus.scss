@@ -115,22 +115,15 @@
 					// background: $color__brand-1;
 					color: #000;
 					border: none!important;
-
-					&:hover {
-						// transition: background 0.375s;
-						// background: rgba(240, 240, 240, .9);
-					}
 				}
 			}
 
-			current_page_item > a,
-			.current-menu-item > a {
+			.current_page_item,
+			.current-menu-item {
 				background: $color__brand-2;
 
-				@include respond-to('large') {
-					&:hover {
-						color: #FFF;
-					}
+				a {
+					color: #FFF;
 				}
 			}
 
