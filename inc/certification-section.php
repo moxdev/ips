@@ -14,35 +14,32 @@
     $cert_page_link = get_field('certification_page_link_url', 'certifications'); ?>
 
       <section id='certifications'>
-        <div class='wrapper'>
+        <?php if($cert_section_title): ?>
 
-          <?php if($cert_section_title): ?>
+          <h2><?php echo esc_html( $cert_section_title ); ?></h2>
 
-            <h2><?php echo esc_html( $cert_section_title ); ?></h2>
+        <?php endif; ?>
 
-          <?php endif; ?>
+          <ul>
 
-            <ul class="certifications">
+            <?php while( have_rows('certifications', 'certifications') ): the_row();
+              $cert_img = get_sub_field('certification_image', 'certifications'); ?>
 
-              <?php while( have_rows('certifications', 'certifications') ): the_row();
-                $cert_img = get_sub_field('certification_image', 'certifications'); ?>
+                <li>
+                  <a href='<?php echo esc_url( $cert_page_link ); ?>'>
 
-                  <li>
-                    <a href='<?php echo esc_url( $cert_page_link ); ?>'>
+                    <?php if( $cert_img ) : ?>
 
-                      <?php if( $cert_img ) : ?>
+                      <img src="<?php echo esc_url( $cert_img['sizes']['home-cert-img'] ); ?>" alt="<?php echo esc_attr( $cert_img['alt'] ); ?>" description="<?php echo esc_attr( $cert_img['description'] ); ?>">
 
-                        <img src="<?php echo esc_url( $cert_img['sizes']['home-cert-img'] ); ?>" alt="<?php echo esc_attr( $cert_img['alt'] ); ?>" description="<?php echo esc_attr( $cert_img['description'] ); ?>">
+                    <?php endif; ?>
 
-                      <?php endif; ?>
+                  </a>
+                </li>
 
-                    </a>
-                  </li>
+            <?php endwhile; ?>
 
-              <?php endwhile; ?>
-
-            </ul>
-        </div>
+          </ul>
       </section>
 
     <?php endif;

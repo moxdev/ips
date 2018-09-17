@@ -28,6 +28,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      line-height: 1.2;
 
       &:after {
         content: "";
@@ -35,7 +36,7 @@
         margin: 0 auto;
         width: 25%;
         padding-top: 20px;
-        border-bottom: 2px solid $color__brand-2;
+        border-bottom: 3px solid $color__brand-2;
       }
 
       &:last-child {
@@ -69,7 +70,7 @@
           height: 50%;
           position: absolute;
           border-bottom: none;
-          border-right: 2px solid $color__brand-2;
+          border-right: 3px solid $color__brand-2;
         }
 
         &:last-child {

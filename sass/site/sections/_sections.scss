@@ -1,5 +1,8 @@
 section#certifications {
   text-align: center;
+  @include max-width($max_width_md);
+  @include section-padding(2);
+  @include padding-left-right;
 
   h2 {
     color: #000;
@@ -11,26 +14,24 @@ section#certifications {
     padding:0;
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
     align-items: center;
-    // text-align: center;
 
     li {
-      margin: 1rem;
-      @include respond-to(x-small) {
-        // flex: 0 0
+      flex: 0 1 33.333%;
 
+      @include respond-to(x-small) {
+        flex:1;
       }
 
       img {
-        width: 70px;
+        display: block;
+        width: 80px;
+        padding: 1em 0;
 
-        @include respond-to(small) {
-          width: 120px;
-
+        @include respond-to(large) {
+          width: 90px;
         }
       }
-
     }
   }
 }
