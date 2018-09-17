@@ -25,6 +25,11 @@
         padding-top: 9em;
         padding-bottom: 9em;
 
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+
         @include respond-to(mobile) {
           padding-top: 11em;
           padding-bottom: 11em;
@@ -77,16 +82,6 @@
         // For some reason, IE11 seems to need this
         left: 0;
         top: 0;
-
-        &:hover {
-          cursor: pointer;
-          -webkit-filter: brightness(70%);
-          -webkit-transition: all 1s ease;
-          -moz-transition: all 1s ease;
-          -o-transition: all 1s ease;
-          -ms-transition: all 1s ease;
-          transition: all 1s ease;
-        }
       }
 
       a {
@@ -104,11 +99,11 @@
         position: relative;
         font-size: 1.765rem;
         line-height: 1.2;
-        text-shadow: #111 0.1em 0.1em 0.2em, #333 0.1em 0.1em 0.2em;
+        text-shadow: 1px 0px 15px #000, 0px 1px 15px #000;
 
         &:before {
           content: '';
-          border-top: 2px solid $color__brand-2;
+          border-top: 3px solid $color__brand-2;
           width: 150px;
           position: absolute;
           top: -15px;
@@ -129,6 +124,11 @@
       background-color: $color__brand-1;
       color: #fff;
       padding: 2em 0;
+
+      &:hover {
+        cursor: pointer;
+        opacity: .9;
+      }
 
       @include respond-to(mobile) {
         padding: 5.5em 0;
