@@ -2,16 +2,17 @@
   position: relative;
   width: 100%;
   min-height: 550px;
-  max-height: 750px;
+  // max-height: 750px;
   overflow: hidden;
   // padding-bottom: 3em;
   // background-color: #fff;
 
-  @include respond-to(small) {
+  @include respond-to(medium) {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
+    height: 750px;
 
   }
 
@@ -42,7 +43,7 @@
     z-index: 50;
     padding-top: 7em;
 
-    @include respond-to(small) {
+    @include respond-to(medium) {
       flex: 1;
       display: flex;
       align-items: baseline;
@@ -52,9 +53,9 @@
     span {
       display: inline-block;
       width: 90%;
-      border-top: 4px solid $color__brand-2;
+      border-top: 5px solid $color__brand-2;
 
-      @include respond-to(small) {
+      @include respond-to(medium) {
         flex:1 1 40%;
         padding-bottom: 2px;
       }
@@ -63,8 +64,9 @@
     .services-list {
       font-size: 1.1em;
 
-      @include respond-to(small) {
-        flex:1 1 60%;
+      @include respond-to(medium) {
+        flex:1 1 auto;
+        // margin-left: auto;
       }
 
       ul {
@@ -98,38 +100,35 @@
     padding-right: 0;
     margin-right: 0;
 
-    @include respond-to(small) {
+    @include respond-to(medium) {
       flex: 1;
       margin-top: 4em;
-    }
-
-    @include respond-to(medium) {
-      // padding-bottom: 4em;
+      padding-left: 0;
     }
 
     .title-container {
       @include padding-right;
       margin: 1.5em 0 1em;
-
-      @include respond-to(small) {
-
-      }
     }
 
     .title {
       max-width: 300px;
-      font-size: 3.529em;
+      font-size: 3.529rem;
       font-family: $font__bold;
       line-height: 1;
-      margin-bottom: .1em;
+      margin-bottom: .5em;
 
       @include respond-to(x-small) {
         max-width: none;
       }
+
+      @include respond-to(medium) {
+        margin-bottom: .25em;
+      }
     }
 
     .subtitle {
-      font-size: 1.765em;
+      font-size: 1.765rem;
       font-family: $font__bold;
       line-height: 1.1;
     }
@@ -140,13 +139,13 @@
       align-items: baseline;
       padding-right: 0;
 
-      @include respond-to(small) {
+      @include respond-to(medium) {
         margin-top: 5em;
       }
 
       span {
         display: inline-block;
-        border-top: 4px solid $color__brand-2;
+        border-top: 5px solid $color__brand-2;
         width: 100%;
         margin-left: 2em;
         padding-bottom: 5px;

@@ -40,4 +40,14 @@ input[type="submit"] {
 	-webkit-appearance: none;
 	-webkit-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
+
+	@include respond-to(large) {
+		min-width: 215px;
+	}
+
+	&:hover {
+		background: $color__brand-1;
+		color: #fff;
+		// border: 3px solid #fff;
+	}
 }
