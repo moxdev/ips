@@ -44,7 +44,7 @@
 
 						<div class='phone'>
 							<span class="title"><?php echo esc_html( $phone_section['phone_section_title'] ); ?></span>
-							<span class="number"><?php echo esc_html( $phone_section['phone_number'] ); ?></span>
+							<a href="tel:<?php echo esc_html( $phone_section['phone_number'] ); ?>" class="number"><?php echo esc_html( $phone_section['phone_number'] ); ?></a>
 						</div>
 
 					<?php	endif; ?>

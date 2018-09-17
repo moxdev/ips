@@ -12,9 +12,13 @@ h1 {
 }
 
 h1.entry-title {
-	font-size: 3.529em;
+	font-size: 3em;
 	line-height: 1;
 	margin-bottom: .4em;
+
+	@include respond-to(mobile) {
+		font-size: 3.529em;
+	}
 
 	.entry-subtitle {
 		display: block;

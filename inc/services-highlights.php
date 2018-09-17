@@ -22,7 +22,7 @@
             <span class='title'><?php echo esc_html( $link_text ); ?></span>
           </a>
           <?php if( $service_img ) : ?>
-            <img src="<?php echo esc_url( $service_img['sizes']['home-cta-img'] ); ?>" alt="<?php echo esc_attr( $service_img['alt'] ); ?>" description="<?php echo esc_attr( $service_img['description'] ); ?>">
+            <img src="<?php echo esc_url( $service_img['sizes']['services-highlight-img'] ); ?>" alt="<?php echo esc_attr( $service_img['alt'] ); ?>" description="<?php echo esc_attr( $service_img['description'] ); ?>">
           <?php endif; ?>
         </li>
 

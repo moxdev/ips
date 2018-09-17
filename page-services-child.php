@@ -27,6 +27,8 @@ get_header();
 				endwhile; // End of the loop.
 				?>
 
+				<?php ips_estimate_callout(); ?>
+
 			</div>
 			<div class='main-column'></div>
 		</main><!-- #main -->

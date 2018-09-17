@@ -15,8 +15,11 @@ body {
 hr {
 	background-color: $color__background-hr;
 	border: 0;
-	height: 1px;
+	height: 5px;
 	margin-bottom: 1.5em;
+	width: 375px;
+	max-width: 100%;
+	margin-left: 0;
 }
 
 @import "lists";

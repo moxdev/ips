@@ -46,8 +46,8 @@ if ( ! function_exists( 'ips_setup' ) ) :
 		add_image_size( 'home-cta-img', 450, 350, true );
 		add_image_size( 'home-cert-img', 175, 9999, false );
 		add_image_size( 'services-highlight-img', 450, 350, true );
-		add_image_size( 'main-content-img', 400, 300, true );
-		add_image_size( 'portfolio-img', 450, 350, true );
+		add_image_size( 'main-content-img', 450, 9999, false );
+		add_image_size( 'portfolio-img', 450, 300, true );
 
 		// Register service child image sizes for use in Add Media modal
 		add_filter( 'image_size_names_choose', 'ips_custom_sizes' );

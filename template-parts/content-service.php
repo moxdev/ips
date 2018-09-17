@@ -25,7 +25,7 @@
 			'after'  => '</div>',
 		) );
 		?>
-		<?php ips_estimate_callout(); ?>
+
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

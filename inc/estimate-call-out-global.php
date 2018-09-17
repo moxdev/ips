@@ -15,7 +15,7 @@
 
       if( $es_title || $es_subtitle ) : ?>
 
-        <div class='estimate-callout'>
+        <section class='estimate-callout'>
           <div class='estimate-title-wrapper'>
             <div class="estimate-title"><?php echo esc_html( $es_title ); ?></div>
             <div class='estimate-subtitle'><?php echo esc_html( $es_subtitle ); ?></div>
@@ -25,7 +25,7 @@
             <a class="btn" href='<?php echo esc_url( $es_button_page_link ); ?>'><?php echo $es_button_text; ?></a><span class='decoration-line'></span>
           </div>
 
-        </div>
+        </section>
 
       <?php endif;
 

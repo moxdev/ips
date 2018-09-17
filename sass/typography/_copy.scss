@@ -8,7 +8,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 2.5em 1.5em .5em;
 	position: relative;
 
 	&:before {
@@ -23,9 +23,12 @@ blockquote {
 	}
 
 	p {
-		margin-bottom: 1em;
+		margin: 0;
+		padding: 0;
 	}
 }
+
+.testimonial-name-tag
 
 address {
 	margin: 0 0 1.5em;

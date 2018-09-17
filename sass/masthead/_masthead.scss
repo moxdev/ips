@@ -52,6 +52,7 @@
       color: $color__brand-2;
       font-size: 1.765rem;
       margin-left: 1rem;
+      text-decoration: none;
     }
 
     @include respond-to('large') {
