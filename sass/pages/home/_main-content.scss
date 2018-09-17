@@ -35,30 +35,35 @@
         z-index: 300;
         color: #fff;
         @include section-padding(2);
+        @include padding-left-right;
         text-align: center;
         @include max-width($max_width_md)
 
-        h1 {
+        h1.entry-title {
           color: #fff;
           @include font-smooth;
+          font-size: 1.765rem;
+          line-height: 1.3;
 
           @include respond-to(small) {
-            font-size: 1.765em;;
+            font-size: 1.765rem;
           }
 
           @include respond-to(large) {
-            font-size: 1.765em;;
+            font-size: 1.765rem;
           }
         }
 
         .btn {
           color: #fff;
           @include font-smooth;
+          margin-top: 2em;
+
+          &:hover {
+            background-color: $color__brand-2;
+          }
         }
       }
-
-
     }
-
   }
 }
