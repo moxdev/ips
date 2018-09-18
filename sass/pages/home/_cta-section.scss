@@ -14,7 +14,6 @@
       }
 
       li {
-        flex:1;
         overflow: hidden;
         // @include padding-left;
         // padding-top: 10rem;
@@ -28,6 +27,8 @@
         border-bottom: 1px solid #FFF;
 
         @include respond-to(medium) {
+          flex: 0 0 33.333%;
+
           &:nth-child(odd), &:nth-child(even) {
             border-right: 1px solid #FFF;
           }
@@ -81,7 +82,6 @@
         }
 
         @include respond-to(medium) {
-          flex: 0 0 33.333%;
           padding-top: 7em;
           padding-bottom: 7em;
         }

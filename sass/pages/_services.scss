@@ -8,41 +8,22 @@
       padding: 0;
       list-style-type: none;
 
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: 850px) {
         display: flex;
         flex-wrap: wrap;
-      };
+      }
 
       li {
         overflow: hidden;
-        @include padding-left-right;
         position: relative;
         z-index: 300;
         display: flex;
         flex-direction: column;
         justify-content: center;
         border-bottom: 1px solid #FFF;
-        padding-top: 9em;
-        padding-bottom: 9em;
 
-        &:hover {
-          -webkit-filter: brightness(70%);
-          -webkit-transition: all 1s ease;
-          -moz-transition: all 1s ease;
-          -o-transition: all 1s ease;
-          -ms-transition: all 1s ease;
-          transition: all 1s ease;
-        }
-
-        @include respond-to(mobile) {
-          padding-top: 11em;
-          padding-bottom: 11em;
-        }
-
-        @media only screen and (min-width: 650px) {
-          flex: 0 0 50%;
-          padding-top: 9em;
-          padding-bottom: 9em;
+        @media only screen and (min-width: 850px) {
+          flex: 0 1 50%;
 
           &:nth-child(odd), &:nth-child(even) {
             border-right: 1px solid #FFF;
@@ -51,17 +32,10 @@
           &:nth-child(2n+2) {
             border-right: none;
           }
-        };
-
-        @include respond-to(medium) {
-          padding-top: 10em;
-          padding-bottom: 10em;
-        };
+        }
 
         @include respond-to(large) {
-          flex: 0 0 33.333%;
-          padding-top: 8em;
-          padding-bottom: 8em;
+          flex: 0 1 33.333%;
 
           &:nth-child(odd), &:nth-child(even) {
             border-right: 1px solid #FFF;
@@ -72,46 +46,87 @@
           }
         }
 
-        @include respond-to(xx-large) {
-          padding-top: 10em;
-          padding-bottom:10em;
-        }
-
-        @include respond-to(xxx-large) {
-          padding-top: 14em;
-          padding-bottom:14em;
-        }
-      }
-
       img {
-        display: block;
+        display: inline-block;
         object-fit: cover;
         font-family: 'object-fit: cover';
         width: 100%;
         height: 100%;
         position: absolute;
-        z-index: 1;
+        z-index: -1;
         // For some reason, IE11 seems to need this
         left: 0;
         top: 0;
       }
 
-      a {
+      a.service-link {
         position: relative;
         z-index: 10;
         color: #fff;
         text-decoration: none;
+        padding-top: 7em;
+        padding-bottom: 7em;
+
+
+        &:hover {
+          img {
+            -webkit-filter: brightness(70%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+          }
+
+          .title {
+
+            &:before {
+              border-top: 3px solid $color__brand-1;
+              transition: all .5s ease;
+            }
+          }
+        }
+
+          @include respond-to(x-small) {
+            padding-top: 8em;
+            padding-bottom: 8em;
+          }
+
+          @include respond-to(medium) {
+            // padding-top: 10em;
+            // padding-bottom: 10em;
+          };
+
+          @include respond-to(large) {
+            // padding-top: 8em;
+            // padding-bottom: 8em;
+          }
+
+          @include respond-to(xx-large) {
+            padding-top: 9em;
+            padding-bottom:9em;
+          }
+
+          @include respond-to(xxx-large) {
+            padding-top: 10em;
+            padding-bottom:10em;
+          }
+        }
       }
 
       span {
         display: inline-block;
+        @include margin-left;
+        // @include margin-right;
+        // @include padding-left-right;
+        text-shadow: 1px 0px 15px #000, 0px 1px 15px #000;
+        // max-width: 90%;
       }
 
       .title {
         position: relative;
         font-size: 1.765rem;
         line-height: 1.2;
-        text-shadow: 1px 0px 15px #000, 0px 1px 15px #000;
         transition: all .2s ease-in-out;
 
         &:before {
@@ -130,14 +145,6 @@
           vertical-align: middle;
           font-size: 1.5em;
         }
-
-        &:hover {
-          transform: scale(1.1);
-
-          &:before {
-            border-top: 3px solid $color__brand-1;
-          }
-        }
       }
     }
 
@@ -145,39 +152,41 @@
       background-color: $color__brand-1;
       color: #fff;
       padding: 2em 0;
+    // @include padding-left;
 
       &:hover {
         cursor: pointer;
-        opacity: .9;
       }
 
       @include respond-to(mobile) {
-        padding: 5.5em 0;
+        // padding: 5.5em 0;
       }
 
       @media only screen and (min-width: 650px) {
-        padding: 3em 0;
+        // padding: 3em 0;
       };
 
       .estimate-title-wrapper {
-        @include padding-left-right;
-        max-width: 90%;
+        @include padding-right;
+        // max-width: 0px;
+        max-width: 70%;
 
         @include respond-to(x-small) {
-          max-width: 70%;
-        }
-
-        @media only screen and (min-width: 650px) {
-          max-width: 100%;
+          max-width: 60%;
         }
 
         @include respond-to(xx-large) {
-          max-width: 80%;
+          // max-width: 80%;
         }
 
         @include respond-to(xxx-large) {
-          max-width: 70%;
+          // max-width: 70%;
         }
+      }
+
+      span {
+        text-shadow: none;
+        @include font-smooth;
       }
 
       .estimate-title {
@@ -188,7 +197,11 @@
         text-transform: uppercase;
         width: 100%;
         padding-left: 1.875rem;
-        margin-bottom: 1rem
+        margin-bottom: 1rem;
+
+        @media only screen and (min-width: 850px) {
+          font-size: 2.5rem;
+        }
       }
 
       .estimate-subtitle {
@@ -199,11 +212,16 @@
         font-family: $font__bold;
         line-height: 1.2;
         margin-bottom: 1rem;
+
+        @media only screen and (min-width: 850px) {
+          font-size: 1.5rem;
+        }
       }
 
       .estimate-button-wrapper {
         @include padding-left;
         display: flex;
+        flex-direction: row;
         // justify-content: flex-end;
         align-items: center;
         // margin-bottom: 1rem
@@ -213,6 +231,9 @@
         margin-left: 1.875rem;
         // padding: 1.2rem rem 1rem;
         min-width: 200px;
+        color: #fff;
+        @include font-smooth;
+        font-size: 1em;
 
         @include respond-to(x-large) {
           min-width: 250px;

@@ -18,12 +18,13 @@
         $service_img = get_sub_field('background_image'); ?>
 
         <li>
-          <a href='<?php echo esc_url( $link_page_url ); ?>'>
+          <a class="service-link" href='<?php echo esc_url( $link_page_url ); ?>'>
             <span class='title'><?php echo esc_html( $link_text ); ?></span>
+            <?php if( $service_img ) : ?>
+              <img src="<?php echo esc_url( $service_img['sizes']['services-highlight-img'] ); ?>" alt="<?php echo esc_attr( $service_img['alt'] ); ?>" description="<?php echo esc_attr( $service_img['description'] ); ?>">
+            <?php endif; ?>
           </a>
-          <?php if( $service_img ) : ?>
-            <img src="<?php echo esc_url( $service_img['sizes']['services-highlight-img'] ); ?>" alt="<?php echo esc_attr( $service_img['alt'] ); ?>" description="<?php echo esc_attr( $service_img['description'] ); ?>">
-          <?php endif; ?>
+
         </li>
 
         <?php endwhile; ?>

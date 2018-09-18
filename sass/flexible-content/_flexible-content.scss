@@ -49,10 +49,15 @@
     }
 
     a {
-      transition: opacity 0.25s;
+      // transition: opacity 0.25s;
 
       &:hover {
-        opacity: 0.8;
+        -webkit-filter: brightness(70%);
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
       }
     }
 
@@ -64,10 +69,6 @@
       &.visible {
         transform: scale(1) translateY(0);
         opacity: 1;
-      }
-
-      &:hover {
-        opacity: 0.8;
       }
     }
 
