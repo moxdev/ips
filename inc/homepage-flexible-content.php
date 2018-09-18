@@ -38,10 +38,11 @@ endif;
           <a href='<?php echo esc_url( $page_link ); ?>'>
             <span class='title'><?php echo esc_html( $title ); ?></span>
             <span class='desc'><?php echo esc_html( $desc ); ?></span>
+            <?php if( $bk_img ) : ?>
+              <img src="<?php echo esc_url( $bk_img['sizes']['home-cta-img'] ); ?>" alt="<?php echo esc_attr( $bk_img['alt'] ); ?>" description="<?php echo esc_attr( $bk_img['description'] ); ?>">
+            <?php endif; ?>
           </a>
-          <?php if( $bk_img ) : ?>
-            <img src="<?php echo esc_url( $bk_img['sizes']['home-cta-img'] ); ?>" alt="<?php echo esc_attr( $bk_img['alt'] ); ?>" description="<?php echo esc_attr( $bk_img['description'] ); ?>">
-          <?php endif; ?>
+
         </li>
         <?php endwhile; ?>
 
