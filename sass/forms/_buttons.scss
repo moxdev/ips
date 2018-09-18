@@ -64,10 +64,4 @@ input[type="submit"] {
 	@include respond-to(large) {
 		min-width: 215px;
 	}
-
-	&:hover {
-		background: $color__brand-1;
-		color: #fff;
-		// border: 3px solid #fff;
-	}
 }

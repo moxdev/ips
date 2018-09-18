@@ -64,8 +64,14 @@
           @include font-smooth;
           margin-top: 2em;
 
+          &:visited {
+            color: #fff;
+          }
+
           &:hover {
             background-color: $color__brand-2;
+            border: 3px solid #fff;
+            transition: all .2s ease-in-out;
           }
         }
       }

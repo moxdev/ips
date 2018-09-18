@@ -44,11 +44,25 @@
     .btn {
       // padding: 1.2rem rem 1rem;
       min-width: 200px;
+      color: $color__brand-1;
+
+      &:visited {
+        color: $color__brand-1;
+      }
+
+      &:hover {
+        border: 3px solid $color__brand-2;
+        background: $color__brand-1;
+        color: #fff;
+        @include font-smooth;
+        transition: all .2s ease-in-out;
+      }
 
       @include respond-to(x-large) {
         min-width: 250px;
 
       }
+
     }
 
     .decoration-line {

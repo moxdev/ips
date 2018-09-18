@@ -142,6 +142,22 @@
       align-items: baseline;
       padding-right: 0;
 
+      .btn {
+        color: $color__brand-1;
+
+        &:visited {
+          color: $color__brand-1;
+        }
+
+        &:hover {
+          border: 3px solid $color__brand-2;
+          background: $color__brand-1;
+          color: #fff;
+          @include font-smooth;
+          transition: all .2s ease-in-out;
+        }
+      }
+
       @include respond-to(medium) {
         margin-top: 5em;
       }
