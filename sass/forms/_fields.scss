@@ -32,10 +32,6 @@ select {
 	color: #000;
 	margin-bottom: 1em;
 	padding: .5em 1em;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-webkit-border-radius: 0px;
-	-webkit-padding: .5em 1em;
 }
 
 textarea {
@@ -50,7 +46,14 @@ input, textarea {
 }
 
 input[type="submit"] {
-	width: 50%;
+	width: 30%;
+
+	&:hover {
+		background: $color__brand-1;
+		color: #fff;
+		@include font-smooth;
+		transition: all .2s ease-in-out;
+	}
 }
 
 input::placeholder,
