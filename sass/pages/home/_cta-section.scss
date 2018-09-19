@@ -9,8 +9,6 @@
 
       @include respond-to(small) {
         display: flex;
-        // flex-wrap: wrap;
-        // justify-content: center;
       }
 
       li {
@@ -28,14 +26,8 @@
           flex-direction: column;
           justify-content: flex-end;
           flex: 0 0 33.333%;
-
-          &:nth-child(odd), &:nth-child(even) {
-            border-right: 1px solid #FFF;
-          }
-
-          &:nth-child(3n+3) {
-            border-right: none;
-          }
+          border-bottom: none;
+          border-right: 1px solid #FFF;
         }
       }
 
@@ -63,6 +55,7 @@
         padding-bottom:7em;
 
         &:hover {
+
           img {
             -webkit-filter: brightness(70%);
             -webkit-transition: all 1s ease;
@@ -78,6 +71,11 @@
           }
         }
 
+        @include respond-to(x-small) {
+          padding-top: 9em;
+          padding-bottom: 9em;
+        }
+
         @include respond-to(small) {
           padding-top: 5em;
           padding-bottom: 5em;
@@ -90,8 +88,8 @@
         }
 
         @include respond-to(large) {
-          // padding-top: 9em;
-          // padding-bottom: 9em;
+          padding-top: 8em;
+          padding-bottom: 8em;
         }
 
         @include respond-to(xx-large) {
@@ -108,14 +106,7 @@
 
       span {
         display: inline-block;
-        // @include margin-left;
         text-shadow: 1px 0px 15px #000, 0px 1px 15px #000;
-        // 2px 1px 20px #000, 1px 2px 20px #000,
-        // 3px 2px 20px #000, 2px 3px 20px #000;
-        // 4px 3px 20px #000, 3px 4px 20px #000,
-        // 5px 4px 20px #000, 4px 5px 20px #000,
-        // 6px 5px 20px #000, 5px 6px 20px #000,
-        // 7px 6px 20px #000;
       }
 
       .title {
