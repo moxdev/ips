@@ -315,5 +315,10 @@ require get_template_directory() . '/inc/services-highlights.php';
  */
 require get_template_directory() . '/inc/estimate-call-out-global.php';
 
+/**
+ * Certification Description.
+ */
+require get_template_directory() . '/inc/certification-description.php';
+
 
 
