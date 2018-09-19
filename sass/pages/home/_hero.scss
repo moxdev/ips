@@ -2,22 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 550px;
-  // max-height: 750px;
   overflow: hidden;
-  // padding-bottom: 3em;
-  // background-color: #fff;
-
-  @include respond-to(medium) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-    height: 650px;
-  }
-
-  @include respond-to(large) {
-    height: 750px;
-  }
 
   &:after {
     content: '';
@@ -28,7 +13,29 @@
     top: 0;
     left: 0;
     background-color: #fff;
-    opacity: .85;
+    opacity: .9;
+  }
+
+  @include respond-to(small) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    height: 650px;
+  }
+
+  @include respond-to(large) {
+    padding-top: 4em;
+  }
+
+  @include respond-to(x-large) {
+    height: 750px;
+    padding-top: 5em;
+  }
+
+  @include respond-to(xx-large) {
+    height: 850px;
+    padding-top: 6em;
   }
 
   img {
@@ -47,9 +54,9 @@
   .services-container {
     position: relative;
     z-index: 50;
-    padding-top: 7em;
+    padding-top: 9em;
 
-    @include respond-to(medium) {
+    @include respond-to(small) {
       flex: 1;
       display: flex;
       align-items: baseline;
@@ -61,18 +68,24 @@
       width: 90%;
       border-top: 5px solid $color__brand-2;
 
-      @include respond-to(medium) {
-        flex:1 1 40%;
+      @include respond-to(small) {
+        flex: 1 1 40%;
         padding-bottom: 2px;
+      }
+
+      @include respond-to(xx-large) {
+        flex: 1 1 50%;
       }
     }
 
     .services-list {
       font-size: 1.1em;
+      padding-top: 1em;
+      padding-left: 1rem;
 
-      @include respond-to(medium) {
-        flex:1 1 auto;
-        // margin-left: auto;
+      @include respond-to(small) {
+        flex: 1 1 auto;
+        padding-top: 0;
       }
 
       ul {
@@ -82,19 +95,19 @@
 
         li {
           font-family: $font__medium;
-          // line-height: 2.2;
           margin-bottom: 1.3rem;
+          position: relative;
 
           &:before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: -1rem;
             content: '\002D';
-            margin-right: .5em;
           }
         }
       }
-    }
-
-    @include respond-to(small) {
-
     }
   }
 
@@ -106,15 +119,25 @@
     padding-right: 0;
     margin-right: 0;
 
-    @include respond-to(medium) {
+    @include respond-to(small) {
       flex: 1;
-      margin-top: 4em;
-      padding-left: 0;
+      padding-bottom: 0;
+      margin-top: 2.5em;
+
+      @media only screen and (min-width: 1010px) {
+        margin-top: 1em;
+        padding-left:0;
+      }
     }
 
     .title-container {
       @include padding-right;
-      margin: 1.5em 0 1em;
+      margin: 2.5em 0 1.5em;
+
+      @include respond-to(small) {
+        margin-top: 0;
+
+      }
     }
 
     .title {
@@ -122,13 +145,13 @@
       font-size: 3.529rem;
       font-family: $font__bold;
       line-height: 1;
-      margin-bottom: .5em;
+      margin-bottom: .25em;
 
       @include respond-to(x-small) {
         max-width: none;
       }
 
-      @include respond-to(medium) {
+      @include respond-to(small) {
         margin-bottom: .25em;
       }
     }
@@ -161,7 +184,7 @@
         }
       }
 
-      @include respond-to(medium) {
+      @include respond-to(small) {
         margin-top: 5em;
       }
 

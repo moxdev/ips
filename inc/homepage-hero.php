@@ -8,6 +8,7 @@
  if (! function_exists( 'ips_home_hero' ) ) :
   function ips_home_hero() {
     if( function_exists( 'get_field' ) ) {
+
       $hero = get_field( 'home_hero' ); ?>
 
         <section class='hero'>
@@ -30,7 +31,7 @@
             </div>
 
             <div class='button-container'>
-              <a class="btn" href='<?php echo $hero['button_page_link']; ?>'><?php echo esc_html( $hero['button_text'] ); ?></a>
+              <a class="btn" href='<?php echo esc_url( $hero['button_page_link'] ); ?>'><?php echo esc_html( $hero['button_text'] ); ?></a>
               <span></span>
             </div>
 
