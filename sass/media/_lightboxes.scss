@@ -97,12 +97,13 @@
   font-family: $font__bold;
   letter-spacing: 1px;
   // text-align: left;
-  // background-color: $color__brand-1;
+  background-color: $color__brand-1;
+  @include font-smooth;
   position: fixed;
   z-index: 10001;
   left: 0;
   right: 0;
-  bottom: 20vh;
+  bottom: 0;
   padding: 0.625em; /* 10 */
 }
 
@@ -153,11 +154,11 @@
 }
 .imagelightbox-arrow:hover,
 .imagelightbox-arrow:focus {
-  background-color: #666;
-  background-color: rgba( 0, 0, 0, .75 );
+  // background-color: #666;
+  // background-color: rgba( 0, 0, 0, .75 );
 }
 .imagelightbox-arrow:active {
-  background-color: #111;
+  // background-color: #111;
 }
 .imagelightbox-arrow-left {
   left: 2.5em; /* 40 */

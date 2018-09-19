@@ -35,3 +35,36 @@ section#certifications {
     }
   }
 }
+
+section#certification-description {
+  @include section-padding(1);
+
+  .certification-wrapper {
+
+    .img-wrapper {
+      margin-bottom: 1.5em;
+    }
+
+    img {
+      display: block;
+    }
+
+    @include respond-to(small) {
+      display: flex;
+      margin-bottom: 2em;
+
+      .img-wrapper {
+        flex: 0 1 20%;
+      }
+
+      .description-wrapper {
+        flex: 0 1 75%;
+        padding-left: 2em;
+
+        @include respond-to(x-large) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
