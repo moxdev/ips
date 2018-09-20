@@ -30,7 +30,7 @@
 
                     <?php if( $cert_img ) : ?>
 
-                      <img src="<?php echo esc_url( $cert_img['sizes']['home-cert-img'] ); ?>" alt="<?php echo esc_attr( $cert_img['alt'] ); ?>" description="<?php echo esc_attr( $cert_img['description'] ); ?>">
+                      <img src="<?php echo esc_url( $cert_img['sizes']['cert-img'] ); ?>" alt="<?php echo esc_attr( $cert_img['alt'] ); ?>" description="<?php echo esc_attr( $cert_img['description'] ); ?>">
 
                     <?php endif; ?>
 

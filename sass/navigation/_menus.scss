@@ -27,7 +27,14 @@
 	}
 
 	&.active {
+
 		transform: translateY(0)!important;
+
+		ul > li > ul > li {
+			&:hover, &:active {
+				background: $color__brand-1;
+			}
+		}
 
 		@include respond-to('large') {
 			transform: none!important;
