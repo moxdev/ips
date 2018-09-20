@@ -8,7 +8,7 @@
       padding: 0;
       list-style-type: none;
 
-      @media only screen and (min-width: 850px) {
+      @include respond-to(small) {
         display: flex;
         flex-wrap: wrap;
       }
@@ -17,12 +17,12 @@
         overflow: hidden;
         position: relative;
         z-index: 300;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         border-bottom: 1px solid #FFF;
 
-        @media only screen and (min-width: 850px) {
+        @include respond-to(small) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           flex: 0 1 50%;
 
           &:nth-child(odd), &:nth-child(even) {
@@ -47,7 +47,7 @@
         }
 
       img {
-        display: inline-block;
+        display: block;
         object-fit: cover;
         font-family: 'object-fit: cover';
         width: 100%;
@@ -60,13 +60,14 @@
       }
 
       a.service-link {
+        display: block;
         position: relative;
         z-index: 10;
         color: #fff;
         text-decoration: none;
+        @include padding-left-right;
         padding-top: 7em;
         padding-bottom: 7em;
-
 
         &:hover {
           img {
@@ -88,39 +89,29 @@
         }
 
           @include respond-to(x-small) {
-            padding-top: 8em;
-            padding-bottom: 8em;
+            padding-top: 9em;
+            padding-bottom: 9em;
           }
 
-          @include respond-to(medium) {
-            // padding-top: 10em;
-            // padding-bottom: 10em;
+          @include respond-to(small) {
+            height: 100%;
           };
 
-          @include respond-to(large) {
-            // padding-top: 8em;
-            // padding-bottom: 8em;
-          }
-
           @include respond-to(xx-large) {
-            padding-top: 9em;
-            padding-bottom:9em;
+            padding-top: 10em;
+            padding-bottom:10em;
           }
 
           @include respond-to(xxx-large) {
-            padding-top: 10em;
-            padding-bottom:10em;
+            padding-top: 12em;
+            padding-bottom:12em;
           }
         }
       }
 
       span {
         display: inline-block;
-        @include margin-left;
-        // @include margin-right;
-        // @include padding-left-right;
         text-shadow: 1px 0px 15px #000, 0px 1px 15px #000;
-        // max-width: 90%;
       }
 
       .title {
@@ -132,7 +123,7 @@
         &:before {
           content: '';
           border-top: 3px solid $color__brand-2;
-          width: 150px;
+          width: 140px;
           position: absolute;
           top: -15px;
           left: 0;
@@ -152,35 +143,23 @@
       background-color: $color__brand-1;
       color: #fff;
       padding: 2em 0;
-    // @include padding-left;
+      @include padding-left;
 
       &:hover {
         cursor: pointer;
       }
 
-      @include respond-to(mobile) {
-        // padding: 5.5em 0;
-      }
-
-      @media only screen and (min-width: 650px) {
-        // padding: 3em 0;
-      };
-
       .estimate-title-wrapper {
         @include padding-right;
-        // max-width: 0px;
-        max-width: 70%;
+        max-width: 300px;
+        overflow:hidden;
 
-        @include respond-to(x-small) {
-          max-width: 60%;
+        @include respond-to(small) {
+          max-width: 350px;
         }
 
-        @include respond-to(xx-large) {
-          // max-width: 80%;
-        }
-
-        @include respond-to(xxx-large) {
-          // max-width: 70%;
+        @include respond-to(x-large) {
+          max-width: 450px;
         }
       }
 
@@ -198,10 +177,6 @@
         width: 100%;
         padding-left: 1.875rem;
         margin-bottom: 1rem;
-
-        @media only screen and (min-width: 850px) {
-          font-size: 2.5rem;
-        }
       }
 
       .estimate-subtitle {
@@ -212,24 +187,16 @@
         font-family: $font__bold;
         line-height: 1.2;
         margin-bottom: 1rem;
-
-        @media only screen and (min-width: 850px) {
-          font-size: 1.5rem;
-        }
       }
 
       .estimate-button-wrapper {
-        @include padding-left;
         display: flex;
         flex-direction: row;
-        // justify-content: flex-end;
         align-items: center;
-        // margin-bottom: 1rem
       }
 
       .btn {
         margin-left: 1.875rem;
-        // padding: 1.2rem rem 1rem;
         min-width: 200px;
         color: #fff;
         @include font-smooth;
@@ -237,13 +204,12 @@
 
         @include respond-to(x-large) {
           min-width: 250px;
-
         }
       }
 
       .decoration-line {
         width: 100%;
-        height: 4px;
+        height: 5px;
         margin-left: 2em;
         margin-top: 15px;
         background-color: $color__brand-2;
