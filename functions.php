@@ -288,7 +288,7 @@ require get_template_directory() . '/inc/homepage-flexible-content.php';
 /**
  * Global Flexible Content.
  */
-require get_template_directory() . '/inc/default-flexible-content.php';
+require get_template_directory() . '/inc/photo-gallery.php';
 
 /**
  * Homepage Hero.

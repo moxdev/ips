@@ -31,8 +31,19 @@
 		transform: translateY(0)!important;
 
 		ul > li > ul > li {
+			background: $color__brand-1;
+
 			&:hover, &:active {
 				background: $color__brand-1;
+			}
+		}
+
+		.current_page_item,
+		.current-menu-item {
+			background: $color__brand-2;
+
+			&:hover, &:active {
+				background: $color__brand-2;
 			}
 		}
 
@@ -211,12 +222,12 @@
 
 	.arrow {
 		position: absolute;
-		left: 0;
-		top: 0;
+		right: 0;
+		top: 7px;
 		bottom: 0;
 		padding: 0;
-		width: 55px;
-		height: 55px;
+		width: 40px;
+		height: 40px;
 		background: none;
 		color: #FFF;
 		display: flex;

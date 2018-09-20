@@ -1,32 +1,16 @@
 <?php
 /**
- * Display Global ACF Felxible Content on default page template
+ * Displays the photo gallery on the Photo Gallery Page
  *
  * @package Indoor_Pollution_Solutions
  */
 
- if (! function_exists( 'ips_default_flexible_content' ) ) :
-  function ips_default_flexible_content() {
-    if( function_exists( 'get_field' ) ) {
-      if( have_rows('default_flexible_sections') ):
-        while ( have_rows('default_flexible_sections') ) : the_row();
-          if( get_row_layout() == 'gallery_section' ):
-            ips_flexible_gallery_section();
-          elseif( get_row_layout() == 'company_values_section' ):
-            // ips_flexible_company_values_section();
-          endif;
-        endwhile;
-      endif;
-    }
-  }
-endif;
+ if (! function_exists( 'ips_gallery_section' ) ) :
+  function ips_gallery_section() { ?>
 
- if (! function_exists( 'ips_flexible_gallery_section' ) ) :
-  function ips_flexible_gallery_section() { ?>
-
-    <section id="photo-gallery" class="acf-flex-content-area">
+    <section id="photo-gallery">
       <?php
-      $imgs = get_sub_field('gallery_images');
+      $imgs = get_field('gallery_images');
       if( $imgs ) { ?>
         <ul class="gallery-list">
 

@@ -31,7 +31,7 @@ get_header();
 			</div>
 			<div class='main-column'></div>
 		</main><!-- #main -->
-		<?php ips_services_highlights(); ?>
+
 		<?php ips_certifications_section(); ?>
 	</div><!-- #primary -->
 
