@@ -29,18 +29,16 @@ endif;
       $imgs = get_sub_field('gallery_images');
       if( $imgs ) { ?>
         <ul class="gallery-list">
+
           <?php foreach($imgs as $img) { ?>
             <li>
-              <a data-imagelightbox="gallery" data-ilb2-caption="<?php echo esc_attr( $img['caption'] ); ?>" href="<?php echo esc_attr( $img['url'] ); ?>" class="item">
+              <a class="item" data-imagelightbox="gallery" data-ilb2-caption="<?php echo esc_attr( $img['caption'] ); ?>" href="<?php echo esc_attr( $img['url'] ); ?>">
                 <img src="<?php echo esc_url( $img['sizes']['portfolio-img'] ); ?>" alt="<?php echo esc_attr( $img['alt'] ); ?>" description="<?php echo esc_attr( $img['description'] ); ?>">
               </a>
-              <!-- Figur out srcsets -->
-              <!-- <a data-imagelightbox="gallery" data-ilb2-caption="<?php // echo esc_attr( $img['caption'] ); ?>" href="<?php // echo esc_attr( $img['url'] ); ?>" class="item">
-                <img src="<?php // echo esc_attr( $img['sizes']['thumbnail'] ); ?>" srcset="<?php // echo esc_attr($img['sizes']['thumbnail']) . ' 150w, ' . esc_attr($img['sizes']['thumb-md']) . ' 300w, ' . esc_attr($img['sizes']['thumb-lg']) . ' 600w, ' . esc_attr($img['sizes']['thumb-xl']) . ' 900w'; ?>" sizes="(min-width: 550px) 275px, (min-width: 950px) 375px, 250px" alt="<?php // echo esc_attr( $img['alt'] ); ?>">
-              </a> -->
             </li>
           <?php } ?>
         </ul>
+
         <?php function gallery_js() { ?>
           <script>
             jQuery('a[data-imagelightbox="gallery"]').imageLightbox({
@@ -58,7 +56,7 @@ endif;
 
         wp_enqueue_script( 'imglightbox-lib', get_template_directory_uri() . '/js/min/imagelightbox.min.js', array( 'jquery' ), NULL, TRUE );
 
-        wp_enqueue_script( 'ips-scroll-view', get_template_directory_uri() . '/js/min/scroll-view.min.js', array('lodash'), NULL, TRUE );
+        // wp_enqueue_script( 'ips-scroll-view', get_template_directory_uri() . '/js/scroll-view.js', array('lodash'), NULL, TRUE );
       }
       ?>
     </section>

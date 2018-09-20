@@ -7,6 +7,7 @@
     @media only screen and (min-width: 650px) {
       display: flex;
       flex-wrap: wrap;
+      justify-content: flex-start;
     }
 
     li {
@@ -16,6 +17,7 @@
 
       @media only screen and (min-width: 650px) {
         flex: 0 1 50%;
+        max-width: 50%; /* IE needs for some reason */
 
         &:nth-child(odd), &:nth-child(even) {
           border-right: 1px solid #FFF;
@@ -24,11 +26,11 @@
         &:nth-child(2n+2) {
           border-right: none;
         }
-
       };
 
       @include respond-to(small) {
         flex: 0 1 33.333%;
+        max-width: 33.333%; /* IE needs for some reason */
 
         &:nth-child(odd), &:nth-child(even) {
           border-right: 1px solid #FFF;
@@ -37,10 +39,6 @@
         &:nth-child(3n+3) {
           border-right: none;
         }
-      }
-
-      @include respond-to(medium) {
-        // flex: 0 1 25%;
       }
     }
 
@@ -61,16 +59,21 @@
       }
     }
 
-    .item {
-      opacity: 0;
-      transform: scale(0.9) translateY(50px);
-      transition: opacity 0.25s, transform 0.25s;
+    // Ask Chris about this ====
+    // .item {
+    //   opacity: 0;
+    //   transform: scale(0.9) translateY(50px);
+    //   transition: opacity 0.25s, transform 0.25s;
 
-      &.visible {
-        transform: scale(1) translateY(0);
-        opacity: 1;
-      }
-    }
+    //   &.visible {
+    //     transform: scale(1) translateY(0);
+    //     opacity: 1;
+    //   }
+
+    //   &:hover {
+    //     opacity: 0.8;
+    //   }
+    // }
 
     img {
       width: 100%;

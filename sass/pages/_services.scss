@@ -20,10 +20,11 @@
         border-bottom: 1px solid #FFF;
 
         @include respond-to(small) {
+          flex: 0 1 50%;
+          max-width: 50%;  /* IE needs this for some reason */
           display: flex;
           flex-direction: column;
           justify-content: center;
-          flex: 0 1 50%;
 
           &:nth-child(odd), &:nth-child(even) {
             border-right: 1px solid #FFF;
@@ -36,6 +37,7 @@
 
         @include respond-to(large) {
           flex: 0 1 33.333%;
+          max-width: 33.333%;  /* IE needs this for some reason */
 
           &:nth-child(odd), &:nth-child(even) {
             border-right: 1px solid #FFF;
@@ -151,15 +153,15 @@
 
       .estimate-title-wrapper {
         @include padding-right;
-        max-width: 300px;
+        width: 300px;
         overflow:hidden;
 
         @include respond-to(small) {
-          max-width: 350px;
+          width: 350px;
         }
 
         @include respond-to(x-large) {
-          max-width: 450px;
+          width: 450px;
         }
       }
 
