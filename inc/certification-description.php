@@ -19,7 +19,7 @@
         if($certification_image): ?>
           <div class='certification-wrapper'>
             <div class='img-wrapper'>
-              <img src="<?php echo esc_url( $certification_image['sizes']['thumbnail'] ); ?>" alt="<?php echo esc_attr( $certification_image['alt'] ); ?>" description="<?php echo esc_attr( $certification_image['description'] ); ?>">
+              <img src="<?php echo esc_url( $certification_image['sizes']['cert-img'] ); ?>" alt="<?php echo esc_attr( $certification_image['alt'] ); ?>" description="<?php echo esc_attr( $certification_image['description'] ); ?>">
             </div>
 
             <div class='description-wrapper'>

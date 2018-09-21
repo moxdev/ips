@@ -1,8 +1,9 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 550px;
   overflow: hidden;
+  background-color: #fff;
+  z-index: 10;
 
   &:after {
     content: '';
@@ -16,28 +17,6 @@
     opacity: .9;
   }
 
-  @include respond-to(small) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-    height: 650px;
-  }
-
-  @include respond-to(large) {
-    padding-top: 4em;
-  }
-
-  @include respond-to(x-large) {
-    height: 750px;
-    padding-top: 5em;
-  }
-
-  @include respond-to(xx-large) {
-    height: 850px;
-    padding-top: 6em;
-  }
-
   img {
     display: inline-block;
     object-fit: cover;
@@ -49,6 +28,42 @@
     // For some reason, IE11 seems to need this
     left: 0;
     top: 0;
+  }
+
+  .content-container {
+    @include respond-to(small) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0;
+      padding-top: 7.5em;
+      padding-bottom: 4em;
+    }
+
+    @include respond-to(small) {
+      padding-top: 8.5em;
+      padding-bottom: 5em;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      padding-top: 11em;
+      padding-bottom: 6.5em;
+    };
+
+    @include respond-to(large) {
+      padding-top: 14em;
+      padding-bottom: 6.75em;
+    }
+
+    @include respond-to(xx-large) {
+      padding-top: 15em;
+      padding-bottom: 7.75em;
+    }
+
+    @include respond-to(xxx-large) {
+      padding-top: 16em;
+      padding-bottom: 8.75em;
+    }
   }
 
   .services-container {
@@ -170,7 +185,7 @@
 
       .btn {
         color: $color__brand-1;
-
+        @include font-smooth;
         &:visited {
           color: $color__brand-1;
         }
@@ -179,7 +194,7 @@
           border: 3px solid $color__brand-2;
           background: $color__brand-1;
           color: #fff;
-          @include font-smooth;
+          // @include font-smooth;
           transition: all .2s ease-in-out;
         }
       }
