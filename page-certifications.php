@@ -31,7 +31,11 @@ get_header();
 			</div>
 			<div class='main-column'></div>
 		</main><!-- #main -->
+<<<<<<< HEAD
 
+=======
+		<?php ips_services_highlights(); ?>
+>>>>>>> 488ca87592c1c29d758fb002f97ddb3d0dfd7541
 		<?php ips_certifications_section(); ?>
 	</div><!-- #primary -->
 
