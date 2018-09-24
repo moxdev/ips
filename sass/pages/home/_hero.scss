@@ -179,7 +179,7 @@
 
     .button-container {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: baseline;
       padding-right: 0;
 
@@ -188,13 +188,13 @@
         @include font-smooth;
         &:visited {
           color: $color__brand-1;
+          flex:1;
         }
 
         &:hover {
           border: 3px solid $color__brand-2;
           background: $color__brand-1;
           color: #fff;
-          // @include font-smooth;
           transition: all .2s ease-in-out;
         }
       }
@@ -204,6 +204,7 @@
       }
 
       span {
+        flex:2;
         display: inline-block;
         border-top: 5px solid $color__brand-2;
         width: 100%;

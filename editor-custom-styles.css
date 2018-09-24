@@ -4,3 +4,10 @@
   padding: 0.5em;
   font-size: 1.3em;
 }
+
+.orange-specials-container {
+  border: 1px dotted #ff7439;
+  display: inline-block;
+  padding: 0.5em;
+  font-size: 1.3em;
+}

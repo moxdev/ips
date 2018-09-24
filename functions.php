@@ -215,9 +215,9 @@ function ips_mce_before_init_insert_formats( $init_array ) {
 		'classes' => 'btn' // CSS class to add
 		),
 		array(
-			'title' => 'Double Column List', // Title to show in dropdown
-			'selector' => 'ul', // Element to add class to
-			'classes' => 'dbl-list' // CSS class to add
+			'title' => 'Orange Specials Box', // Title to show in dropdown
+			'block' => 'div', // Element to add class to
+			'classes' => 'orange-specials-container' // CSS class to add
 		),
 		array(
 			'title' => 'Testimonial Name Tag', // Title to show in dropdown

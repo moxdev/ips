@@ -5,6 +5,10 @@
 #mm4-contact-form {
   // padding-bottom: 1.5rem;
 
+  .disclaimer {
+    font-family: $font__italic;
+  }
+
   .msg-box {
     display: none;
     padding: 0.75rem;
