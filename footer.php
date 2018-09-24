@@ -121,11 +121,11 @@
 
 				endif; ?>
 
-				<a rel="noopener noreferrer" href="https://mm4solutions.com">Website by Millennium Marketing Solutions</a>
 
 			</div>
 
 		</div><!-- .site-info -->
+		<a class="mm4" rel="noopener noreferrer" href="https://mm4solutions.com">Website by Millennium Marketing Solutions</a>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
