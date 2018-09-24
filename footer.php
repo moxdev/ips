@@ -120,6 +120,9 @@
 					<?php endif;
 
 				endif; ?>
+
+				<a href="https://www.mm4solutions.com/" target="_blank" id="mms" rel="noopener noreferrer">Website by Millennium Marketing Solutions.</a>
+
 			</div>
 
 		</div><!-- .site-info -->
