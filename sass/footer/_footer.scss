@@ -151,27 +151,4 @@
       margin: 0 0 .75em;
     }
   }
-
-  .mm4 {
-    display: block;
-    color: #fff;
-    font-size: .8em;
-    text-decoration: none;
-    text-align: right;
-    margin-left:auto;
-    margin-bottom: 2em;
-    @include padding-left-right;
-
-    @include respond-to(large) {
-      font-size: .7em;
-    }
-
-    &:visited, &:active {
-      color: #fff;
-    }
-
-    &:hover {
-      color: $color__brand-2;
-    }
-  }
 }

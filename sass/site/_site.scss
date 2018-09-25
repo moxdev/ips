@@ -86,6 +86,8 @@
 
   @include respond-to(small) {
     font-size: 2em;
+    // padding: .5em;
+
   }
 }
 

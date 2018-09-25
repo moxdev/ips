@@ -96,7 +96,6 @@
   color: #fff;
   font-family: $font__bold;
   letter-spacing: 1px;
-  // text-align: left;
   background-color: $color__brand-1;
   @include font-smooth;
   position: fixed;
@@ -157,11 +156,6 @@
 }
 .imagelightbox-arrow:active {
   background-color: $color__brand-2;
-  // background-color: #666;
-  // background-color: rgba( 0, 0, 0, .75 );
-}
-.imagelightbox-arrow:active {
-  // background-color: #111;
 }
 .imagelightbox-arrow-left {
   left: 0.5em; /* 40 */
