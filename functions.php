@@ -42,7 +42,7 @@ if ( ! function_exists( 'ips_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'home-hero', 2000, 9999, false );
-		add_image_size( 'home-main-content-img', 3000, 9999, false );
+		add_image_size( 'home-main-content-img', 2200, 9999, false );
 		add_image_size( 'home-cta-img', 450, 350, true );
 		add_image_size( 'cert-img', 175, 9999, false );
 		add_image_size( 'cert-img-description', 300, 9999, false );
