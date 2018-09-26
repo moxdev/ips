@@ -127,10 +127,8 @@
 				@include respond-to('large') {
 					margin-top: 0;
 					margin-bottom: 0;
-					// padding: 0.75rem;
 					width: 200px;
 					font-size: 0.9375em;
-					// background: $color__brand-1;
 					color: #000;
 					border: none!important;
 				}
@@ -327,14 +325,6 @@
 
 /* Social Media */
 .social-media {
-	// margin-top: 0;
-	// margin-bottom: 0.5rem;
-
-
-	@include respond-to('small') {
-		// margin-top: 2rem;
-		// margin-left: auto;
-	}
 
 	ul {
 		list-style: none;
@@ -381,12 +371,12 @@
 
 	.yt a {
 		width: 35px;
-		background-position: -161px -4px;
+		background-position: -172px -4px;
 	}
 
 	.goo a {
 		width: 35px;
-		background-position: -82px -4px;
+		background-position: -88px -4px;
 	}
 
 	.linked a {
