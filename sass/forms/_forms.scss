@@ -3,7 +3,6 @@
 @import "fields";
 
 #mm4-contact-form {
-  // padding-bottom: 1.5rem;
 
   .disclaimer {
     font-family: $font__italic;
@@ -20,10 +19,6 @@
       &:last-of-type {
         margin-bottom: 0;
       }
-    }
-
-    span {
-      // font-family: $font__main-bold;
     }
 
     &.error {

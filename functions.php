@@ -135,11 +135,9 @@ function ips_scripts() {
 
 	wp_enqueue_script( 'ips-navigation', get_template_directory_uri() . '/js/min/navigation.min.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'ips-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'ips-skip-link-focus-fix', get_template_directory_uri() . '/js/min/skip-link-focus-fix.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ips-object-fit-library', get_template_directory_uri() . '/js/min/ofi.min.js', array(), '20151215', true );
-
-	wp_register_script( 'lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js', array(), NULL, TRUE );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -282,29 +280,29 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Homepage Flexible Content.
- */
-require get_template_directory() . '/inc/homepage-flexible-content.php';
-
-/**
- * Global Flexible Content.
- */
-require get_template_directory() . '/inc/photo-gallery.php';
-
-/**
  * Homepage Hero.
  */
 require get_template_directory() . '/inc/homepage-hero.php';
 
 /**
- * Social Media Menu.
+ * Homepage Flexible Content.
  */
-require get_template_directory() . '/inc/social-media-menu.php';
+require get_template_directory() . '/inc/homepage-flexible-content.php';
 
 /**
- * Global Certification section.
+ * Portfolio Photo Gallery.
+ */
+require get_template_directory() . '/inc/photo-gallery.php';
+
+/**
+ * Global Certification Section.
  */
 require get_template_directory() . '/inc/certification-section.php';
+
+/**
+ * Certification Description.
+ */
+require get_template_directory() . '/inc/certification-description.php';
 
 /**
  * Services Highlights section.
@@ -317,9 +315,9 @@ require get_template_directory() . '/inc/services-highlights.php';
 require get_template_directory() . '/inc/estimate-call-out-global.php';
 
 /**
- * Certification Description.
+ * Social Media Menu.
  */
-require get_template_directory() . '/inc/certification-description.php';
+require get_template_directory() . '/inc/social-media-menu.php';
 
 
 

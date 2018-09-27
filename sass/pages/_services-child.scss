@@ -36,13 +36,11 @@
 
     .estimate-button-wrapper {
       display: flex;
-      // justify-content: flex-end;
       align-items: center;
       padding-left: 2rem;
     }
 
     .btn {
-      // padding: 1.2rem rem 1rem;
       min-width: 200px;
       color: $color__brand-1;
 
@@ -60,9 +58,7 @@
 
       @include respond-to(x-large) {
         min-width: 250px;
-
       }
-
     }
 
     .decoration-line {

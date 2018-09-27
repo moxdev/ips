@@ -39,8 +39,6 @@
         add_action('wp_footer', 'gallery_js', 100);
 
         wp_enqueue_script( 'imglightbox-lib', get_template_directory_uri() . '/js/min/imagelightbox.min.js', array( 'jquery' ), NULL, TRUE );
-
-        // wp_enqueue_script( 'ips-scroll-view', get_template_directory_uri() . '/js/scroll-view.js', array('lodash'), NULL, TRUE );
       }
       ?>
     </section>

@@ -52,7 +52,7 @@
 
 						<div class='phone-section'>
 							<span class='title'><?php echo esc_html( $phone_section['phone_section_title'] ); ?></span>
-							<a href='tel:<?php echo esc_html( $phone_section['phone_number'] ); ?>'><?php echo esc_html( $phone_section['phone_number'] ); ?></a>
+							<a itemprop="telephone" href='tel:<?php echo esc_html( $phone_section['phone_number'] ); ?>'><?php echo esc_html( $phone_section['phone_number'] ); ?></a>
 						</div>
 
 					<?php endif;
@@ -61,7 +61,7 @@
 
 						<div class='email-section'>
 							<span class='title'><?php echo esc_html( $email_section['email_section_title'] ); ?></span>
-							<a href='mailto:<?php echo esc_html( $email_section['email_address'] ); ?>'><?php echo esc_html( $email_section['email_address'] ); ?></a>
+							<a itemprop="email" href='mailto:<?php echo esc_html( $email_section['email_address'] ); ?>'><?php echo esc_html( $email_section['email_address'] ); ?></a>
 						</div>
 
 					<?php endif;
@@ -83,7 +83,7 @@
 
 			</div>
 
-			<div class='column location-copyright'>
+			<div class='column location-copyright' itemscope itemtype="http://schema.org/Organization">
 
 				<?php if( function_exists( 'get_field' ) ) :
 					$location_section = get_field( 'location_section', 'company-information' );
@@ -94,17 +94,17 @@
 
 						<div class='location-section'>
 							<span class='title'><?php echo esc_html( $location_section['location_section_title'] ); ?></span>
-							<span><?php echo esc_html( $location_section['address_1'] ); ?></span><br>
+							<span itemprop="streetAddress"><?php echo esc_html( $location_section['address_1'] ); ?></span><br>
 
 								<?php if($location_section['address_2']) : ?>
 
-									<span>, <?php echo esc_html( $location_section['address_2'] ); ?></span><br>
+									<span itemprop="streetAddress">, <?php echo esc_html( $location_section['address_2'] ); ?></span><br>
 
 								<?php endif; ?>
 
-							<span><?php echo esc_html( $location_section['city'] ); ?>,</span>
-							<span> <?php echo esc_html( $location_section['state'] ); ?></span>
-							<span> <?php echo esc_html( $location_section['zip'] ); ?></span>
+							<span itemprop="addressLocality"><?php echo esc_html( $location_section['city'] ); ?>,</span>
+							<span itemprop="addressRegion"> <?php echo esc_html( $location_section['state'] ); ?></span>
+							<span itemprop="postalCode"> <?php echo esc_html( $location_section['zip'] ); ?></span>
 
 						</div>
 
@@ -121,8 +121,10 @@
 
 				endif; ?>
 			</div>
-
 		</div><!-- .site-info -->
+
+		<a class="mm4" rel="noopener noreferrer" href="https://mm4solutions.com">Website by Millennium Marketing Solutions</a>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

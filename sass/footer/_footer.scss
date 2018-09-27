@@ -120,6 +120,10 @@
         content: '\002D';
         margin-right: .5rem;
       }
+
+      &:hover {
+        color: $color__brand-2;
+      }
     }
   }
 
@@ -149,6 +153,25 @@
 
     p {
       margin: 0 0 .75em;
+    }
+  }
+
+  .mm4 {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    color: #fff;
+    text-decoration: none;
+    font-size: .8em;
+    @include padding-left-right;
+
+    &:hover {
+      color: $color__brand-2;
+    }
+
+    @include respond-to(medium) {
+      text-align: right;
+      font-size: .7em;
     }
   }
 }

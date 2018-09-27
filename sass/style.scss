@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Fonts
 # Normalize
 # Typography
 # Elements
@@ -43,6 +44,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Galleries
 # Pages
 	## Home Page
+	## Services Page
+	## Services Child Page
+	## Portfolio Page
+	## Testimonial Page
 # Footer
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
@@ -112,11 +117,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
-
-/*--------------------------------------------------------------
-# Default Flexible Content
---------------------------------------------------------------*/
-@import "flexible-content/flexible-content";
 
 /*--------------------------------------------------------------
 # Special Sections

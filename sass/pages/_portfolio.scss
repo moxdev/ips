@@ -1,3 +1,65 @@
-#portfolio {
+#photo-gallery {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
+    @media only screen and (min-width: 650px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid #FFF;
+
+      @media only screen and (min-width: 650px) {
+        flex: 0 1 50%;
+        max-width: 50%; /* IE needs for some reason */
+
+        &:nth-child(odd), &:nth-child(even) {
+          border-right: 1px solid #FFF;
+        }
+
+        &:nth-child(2n+2) {
+          border-right: none;
+        }
+      };
+
+      @include respond-to(small) {
+        flex: 0 1 33.333%;
+        max-width: 33.333%; /* IE needs for some reason */
+
+        &:nth-child(odd), &:nth-child(even) {
+          border-right: 1px solid #FFF;
+        }
+
+        &:nth-child(3n+3) {
+          border-right: none;
+        }
+      }
+    }
+
+    a, img {
+      display: block;
+    }
+
+    a {
+
+      &:hover {
+        -webkit-filter: brightness(70%);
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }

@@ -221,7 +221,7 @@
 	.arrow {
 		position: absolute;
 		right: 0;
-		top: 7px;
+		top: 0;
 		bottom: 0;
 		padding: 0;
 		width: 40px;
@@ -242,15 +242,14 @@
 		}
 
 		&:after {
-			content: '\2228';
+			content: '\25BC \FE0E';
 			display: block;
-			margin-top: -22px;
 			transition: transform 0.25s, margin-top 0.25s;
 		}
 
 		&.active:after {
 			transform: rotate(180deg);
-			margin-top: -15px;
+			margin-top: -6px;
 		}
 	}
 }
